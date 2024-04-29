@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+<!------------------- Подключение header---------------------->
+
+    <header class="header">
+
+        <div class="container">
+
+            <div class="header__inner">
+
+                <a href="#" class="header__logo">
+
+                    <img src="../../images/logo.svg" alt="">
+
+                </a>
+
+    
+
+                <nav class="header__nav">
+
+                    <a href="#" class="header__nav-link">Направления</a>
+
+                    <a href="#" class="header__nav-link">Врачи</a>
+
+                    <a href="#" class="header__nav-link">О клинике</a>
+
+    
+
+    
+
+                    <div class="header__nav-dropdown">
+
+                        <div class="header__nav-dropdown--header">
+
+                            <p>Пациентам</p>
+
+                            <img class="dropdown__row" src="../../images/dropdown__row.svg" alt="">
+
+                        </div>
+
+                        <div class="header__nav-dropdown--inner">
+
+                            <a href="" class="dropdown__inner-link">Часто задаваемые вопросы</a>
+
+                            <a href="" class="dropdown__inner-link">Цены</a>
+
+                            <a href="" class="dropdown__inner-link">Статьи</a>
+
+                            <a href="" class="dropdown__inner-link">Информация для пациентов</a>
+
+                        </div>
+
+    
+
+                    </div>
+
+    
+
+    
+
+                    <a href="#" class="header__nav-link">Публикации</a>
+
+                    <a href="#" class="header__nav-link">Отзывы</a>
+
+                </nav>
+
+    
+
+                <div class="header__btn">
+
+                    <svg class="eye__button" width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                        <rect y="0.5" width="62" height="62" rx="31" fill="#EDEDED"/>
+
+                        <path d="M19.5176 26.9581C16.7227 29.1072 15 31.2719 15 31.5001C15 31.9659 22.1775 40.5001 31 40.5001C39.8225 40.5001 47 31.9659 47 31.5001C47 31.0344 39.8225 22.5001 31 22.5001C27.8086 22.5001 24.8324 23.6168 22.3333 25.0645" stroke="#11394A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+                        <path d="M33 31.5C33 32.6046 32.1045 33.5 31 33.5C29.8955 33.5 29 32.6046 29 31.5C29 30.3954 29.8955 29.5 31 29.5C32.1045 29.5 33 30.3954 33 31.5Z" fill="#11394A"/>
+
+                        <path d="M36 31.5C36 34.2615 33.7613 36.5 31.0001 36.5C28.2387 36.5 26 34.2615 26 31.5C26 28.7385 28.2387 26.5 31.0001 26.5C33.7613 26.5 36 28.7385 36 31.5Z" stroke="#11394A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+                    </svg>
+
+    
+
+                    <div class="button header__button">Записаться на прием</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="main" id="main">
+        
+<!------------------- Подключение оффера ---------------------->
+
+        <section class="offer">
+            <div class="container">
+                <div class="offer__inner">
+                    <div class="offer__main">
+
+                        <div class="offer__consultation">
+                            <div class="offer__consultation-wrapper">
+                                <div class="offer__consultation-header">
+                                    <h1>Консультации специалистов</h1>
+                                </div>
+                                <div class="offer__consultation-text">
+                                    <p>Мы бережно относимся к каждому пациенту.<br>Наши специалисты устанавливают причины заболеваний, а не просто лечат симптомы</p>
+                                </div>
+                                <form action="" class="offer__consultation-form">                           
+                                    <div class="offer__consultation-form-input-block">
+                                        <svg class="input__phone" width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.3462 15.0438C7.21236 18.5418 8.09786 24.4836 14.0562 30.4438C15.3541 31.7536 16.7879 32.9213 18.3334 33.9271M10.153 9.55113C12.7069 6.99729 16.7805 7.34013 18.403 10.2478L19.5929 12.3781C20.6654 14.3031 20.2345 16.8258 18.5442 18.518C18.5442 18.518 16.4909 20.5695 20.2125 24.2893C23.9287 28.0055 25.982 25.9576 25.982 25.9576C27.6742 24.2655 30.1987 23.8346 32.1219 24.9071L34.254 26.0988C37.1599 27.7195 37.5027 31.7931 34.9489 34.3488C33.4144 35.8815 31.5334 37.0768 29.4562 37.1538C27.5567 37.2195 25.6587 36.9832 23.8334 36.4535" stroke="#BCC4BC" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                        <input type="text" class="offer__consultation-form-phone tel" placeholder="+7 (999) 999 - 99 - 99">
+                                    </div>
+
+                                    <button class="row__button">
+                                        <p>Записаться на прием</p>
+                                        <div class="button__row">
+                                            <img src="../images/button__row.svg" alt="">
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+        
+                        <div class="offer__stock">
+                            <div class="swiper stockSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../images/first__slide.png" alt="">
+                                        <p>Чек ап «Красота и здоровье» со скидкой 20% возможно в две строчки</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../images/second__slide.png" alt="">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Congue in aenean ullamcorper sed semper turpis facilisi. Pellentesque consectetur.</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../images/third__slide.png" alt="">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Congue in aenean ullamcorper sed semper turpis facilisi. Pellentesque consectetur.</p>
+                                    </div>
+                                </div>
+                                <div class="offer__stock-description">
+                                    <div class="offer__stock-description--text">
+                                        <p></p>
+                                    </div>
+                                    <div class="offer__stock-description--pagination">
+                                        <!-- Добавление стрелок -->
+                                        <div class="offer__stock-description--pagination-buttons">
+                                            <div class="stockSwiper-prev">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23 12.75C23.4142 12.75 23.75 12.4142 23.75 12C23.75 11.5858 23.4142 11.25 23 11.25V12.75ZM2 12L1.46967 11.4697C1.17678 11.7626 1.17678 12.2374 1.46967 12.5303L2 12ZM7.46967 18.5303C7.76256 18.8232 8.23744 18.8232 8.53033 18.5303C8.82322 18.2374 8.82322 17.7626 8.53033 17.4697L7.46967 18.5303ZM8.53033 6.53033C8.82322 6.23744 8.82322 5.76256 8.53033 5.46967C8.23744 5.17678 7.76256 5.17678 7.46967 5.46967L8.53033 6.53033ZM23 11.25H2V12.75H23V11.25ZM1.46967 12.5303L7.46967 18.5303L8.53033 17.4697L2.53033 11.4697L1.46967 12.5303ZM2.53033 12.5303L8.53033 6.53033L7.46967 5.46967L1.46967 11.4697L2.53033 12.5303Z" fill="white"/>
+                                                </svg>
+                                            </div>
+                                            <div class="stockSwiper-next">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2 12H23M23 12L17 6M23 12L17 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <!-- Добавление пагинации -->
+                                        <div class="swiper-pagination"></div>
+                                        <div class="offer__stock-description--pagination-btn">
+                                            <a class="button__row">
+                                                <img src="../images/row__white.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="offer__uniqueness">
+
+                        <div class="offer__uniqueness-block">
+                            <img class="offer__uniqueness-block--leaf" src="../images/leaf__icon.svg" alt="">
+                            <div class="offer__uniqueness-block__inner">
+                                <p class="offer__uniqueness-block__inner--text">Успешной работы на рынке
+                                    медицины и здравоохранения
+                                </p>
+                                <div class="offer__uniqueness-block__inner--info">
+                                    <img src="../images/hospital.svg" alt="">
+                                    <div class="offer__uniqueness-block__inner--info-number">
+                                        <p>10+</p>
+                                        <span>лет</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="offer__uniqueness-block">
+                            <img class="offer__uniqueness-block--leaf" src="../images/leaf__icon.svg" alt="">
+                            <div class="offer__uniqueness-block__inner">
+                                <p class="offer__uniqueness-block__inner--text">Квалифицированных
+                                    специалистов различных направлений помогут вам
+                                </p>
+                                <div class="offer__uniqueness-block__inner--info">
+                                    <img src="../images/doctor__icon.svg" alt="">
+                                    <div class="offer__uniqueness-block__inner--info-number">
+                                        <p>25+</p>
+                                        <span>чел</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="offer__uniqueness-block">
+                            <img class="offer__uniqueness-block--leaf" src="../images/leaf__icon.svg" alt="">
+                            <div class="offer__uniqueness-block__inner">
+                                <p class="offer__uniqueness-block__inner--text">Новейшего оборудования для высокоточной диагностики и качественного лечения
+                                </p>
+                                <div class="offer__uniqueness-block__inner--info">
+                                    <img src="../images/microscope__icon.svg" alt="">
+                                    <div class="offer__uniqueness-block__inner--info-number">
+                                        <p>12+</p>
+                                        <span>шт</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="offer__uniqueness-block" style="background-image: url(../images/offer__uniqueness-img.png);">
+                            <div class="offer__uniqueness-block__inner offer__uniqueness-block__inner--social">
+                                <a href="#">
+                                    <img src="../images/socials__vk.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="../images/socials__wa.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="../images/socials__viber.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    
+<!------------------- Блок направлений ---------------------->
+
+        <section class="directions">
+            <div class="container">
+                <div class="directions__inner">
+                    <div class="section__header">
+                        <div class="section__header-header">
+                            <h2>Наши <p>напрвления</p></h2>
+                        </div>
+                        <a href="" class="section__header-button">
+                            <p>Все направления</p>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 5L15 12L9 19" stroke="#11394A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+
+
+                    <div class="directions__items">
+                        <div class="directions__item">
+                            <img src="../images/direction__leaf.svg" alt="" style="pointer-events: none;">
+                            <div class="directions__item-wrapper">
+                                <div class="directions__item-wrapper--info">
+                                    <a href="" class="directions__item-header">
+                                        <p>Прием специалистов</p>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 15L15 1M15 1H4.5M15 1V11.5" stroke="#79C1DC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                        <div class="direction__list">
+                                            <a href="#" class="direction__list-item">Гинеколог</a>
+                                            <a href="#" class="direction__list-item">Терапевт</a>
+                                            <a href="#" class="direction__list-item">Оториноларинголог</a>
+                                            <a href="#" class="direction__list-item">Кардиолог</a>
+                                            <a href="#" class="direction__list-item">Невролог</a>
+                                            <a href="#" class="direction__list-item">Травматолог</a>
+                                            <a href="#" class="direction__list-item">Эндокринолог</a>
+                                            <a href="#" class="direction__list-item">Гастроэнтеролог</a>
+                                        </div>        
+                                    <a href="#" class="direction__btn">Еще +10</a>    
+                                </div>
+
+                                <div class="directions__item-wrapper--img">
+                                    <img src="../images/stetoscope.svg" alt="">
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="directions__item directions__item-flex" style="border: none; padding: 0;">
+                            <div class="directions__item-diagnostics">
+                                <img class="directions__item-leaf" src="../images/second__direction__leaf.svg" alt="" style="pointer-events: none;">
+                                <div class="directions__item-wrapper--info">
+                                    <a href="" class="directions__item-header">
+                                        <p>Диагностика</p>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 15L15 1M15 1H4.5M15 1V11.5" stroke="#79C1DC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                    <div class="direction__list">
+                                        <a href="#" class="direction__list-item">Узи</a>
+                                        <a href="#" class="direction__list-item">Эндоскопия</a>
+                                    </div>        
+                                    <a href="#" class="direction__btn">Еще +10</a>    
+                                </div>
+                                <div class="directions__item-wrapper--img">
+                                    <img src="../images/uzi.svg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="directions__item-analyzes">
+                                <img class="directions__item-leaf" src="../images/second__direction__leaf.svg" alt="" style="pointer-events: none;">
+                                <div class="directions__item-wrapper--info">
+                                    <a href="" class="directions__item-header">
+                                        <p>Анализы</p>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 15L15 1M15 1H4.5M15 1V11.5" stroke="#79C1DC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="direction__btn">40+ анализов</a>    
+                                </div>
+                                <div class="directions__item-wrapper--img">
+                                    <img src="../images/direction__microscope.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+<!------------------- Подключение блока ФОС ---------------------->
+
+         <section class="consultation">
+
+             <div class="container">
+
+                 <div class="consultation__inner">
+
+                     <img class="consultation__leaf-left" src="../../images/consultation__leaf-left.svg" alt="" style="pointer-events: none;">
+
+                     <img class="consultation__leaf-right" src="../../images/consultation__leaf-right.svg" alt="" style="pointer-events: none;">
+
+                     <div class="consultation__header">
+
+                         <div class="section__header-header">
+
+                             <h2>Мы проводим <p>бесплатные</p> консультации
+
+                                 по нашим услугам, чтобы вы могли подобрать то,
+
+                                 что подходит <p>именно вам</p></h2>
+
+                         </div>
+
+                     </div>
+
+         
+
+                     <form action="" class="consultation__form">
+
+                         <div class="consultation__form-inputs">
+
+                             <input type="text" class="consultation__form-input" placeholder="Как к вам обращаться?">
+
+                             <div class="offer__consultation-form-input-block">
+
+                                 <svg class="input__phone" width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                     <path d="M7.3462 15.0438C7.21236 18.5418 8.09786 24.4836 14.0562 30.4438C15.3541 31.7536 16.7879 32.9213 18.3334 33.9271M10.153 9.55113C12.7069 6.99729 16.7805 7.34013 18.403 10.2478L19.5929 12.3781C20.6654 14.3031 20.2345 16.8258 18.5442 18.518C18.5442 18.518 16.4909 20.5695 20.2125 24.2893C23.9287 28.0055 25.982 25.9576 25.982 25.9576C27.6742 24.2655 30.1987 23.8346 32.1219 24.9071L34.254 26.0988C37.1599 27.7195 37.5027 31.7931 34.9489 34.3488C33.4144 35.8815 31.5334 37.0768 29.4562 37.1538C27.5567 37.2195 25.6587 36.9832 23.8334 36.4535" stroke="#BCC4BC" stroke-width="2" stroke-linecap="round"/>
+
+                                 </svg>
+
+                                 <input type="text" class="offer__consultation-form-phone tel" placeholder="+7 (999) 999 - 99 - 99">
+
+                             </div>
+
+                         </div>
+
+                         <div class="consultation__form-btn">
+
+                             <div class="consultation__form-btn--policy">
+
+                                 <label class="check-label" for="form__checkbox-popup" >
+
+                                     <span class="options__desc">
+
+                                     </span>
+
+                                     <input
+
+                                         id="form__checkbox-popup"
+
+                                         type="checkbox"
+
+                                         name="checkbox"
+
+                                     />
+
+                                     <span
+
+                                         class="fakecheck"
+
+                                     >
+
+                                         <svg
+
+                                             xmlns="http://www.w3.org/2000/svg"
+
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+
+                                             viewBox="0 0 24 24"
+
+                                             width="18px"
+
+                                             height="18px"
+
+                                             id="checkmark"
+
+                                         >
+
+                                             <polyline
+
+                                                 fill="none"
+
+                                                 stroke="#fff"
+
+                                                 stroke-width="3"
+
+                                                 stroke-linecap="round"
+
+                                                 stroke-linejoin="round"
+
+                                                 stroke-miterlimit="10"
+
+                                                 points=" 5,12 9,16 18,8"
+
+                                             />
+
+                                         </svg>
+
+                                     </span>
+
+                                 </label>
+
+                                 <p>Я соглашаюсь с <a href="">политикой конфиденциальности</a></p>
+
+                             </div>
+
+                             <button class="row__button">
+
+                                 <p>Получить консультацию</p>
+
+                                 
+
+                                 <div class="row__button-wrapper">
+
+                                     <div class="button__row">
+
+                                         <img src="../images/button__row.svg" alt="">
+
+                                     </div>
+
+                                 </div>
+
+                             </button>
+
+                         </div>
+
+                     </form>
+
+                 </div>
+
+             </div>
+
+         </section>
+
+
+<!------------------- Блок врачей ---------------------->        
+
+        <section class="doctors">
+            <div class="container">
+                <div class="doctors__inner">
+                    <div class="section__header">
+                        <div class="section__header-header">
+                            <h2><p>Сертифицированные</p> специалисты</h2>
+                        </div>
+                        <a href="" class="section__header-button">
+                            <p>Все врачи</p>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 5L15 12L9 19" stroke="#11394A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="swiper doctorsSwiper">
+                        <div class="swiper-wrapper">
+
+
+                            <div class="swiper-slide">
+                                <div class="doctor__card">
+                                    <div class="doctor__card-img">
+                                        <img src="../images/doctors__leaf.svg" alt="" class="doctors__leaf">
+                                        <img src="../images/doctor__img.png" alt="" class="doctor__card-img--img">
+                                    </div>
+                                    <div class="doctor__card-description">
+                                        <div class="doctor__card-description--info">
+                                            <div>Анастасия Александровна Кульбаба (Тарасова)</div>
+                                            <span>Гастроэнтеролог</span>
+                                        </div>     
+                                        <div class="offer__stock-description--pagination-btn">
+                                            <a class="button__row">
+                                                <img src="../images/row__white.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="swiper-slide">
+                                <div class="doctor__card">
+                                    <div class="doctor__card-img">
+                                        <img src="../images/doctors__leaf.svg" alt="" class="doctors__leaf">
+                                        <img src="../images/doctor__img.png" alt="" class="doctor__card-img--img">
+                                    </div>
+                                    <div class="doctor__card-description">
+                                        <div class="doctor__card-description--info">
+                                            <div>Анастасия Александровна Кульбаба (Тарасова)</div>
+                                            <span>Гастроэнтеролог</span>
+                                        </div>     
+                                        <div class="offer__stock-description--pagination-btn">
+                                            <a class="button__row">
+                                                <img src="../images/row__white.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="doctor__card">
+                                    <div class="doctor__card-img">
+                                        <img src="../images/doctors__leaf.svg" alt="" class="doctors__leaf">
+                                        <img src="../images/doctor__img.png" alt="" class="doctor__card-img--img">
+                                    </div>
+                                    <div class="doctor__card-description">
+                                        <div class="doctor__card-description--info">
+                                            <div>Анастасия Александровна Кульбаба (Тарасова)</div>
+                                            <span>Гастроэнтеролог</span>
+                                        </div>     
+                                        <div class="offer__stock-description--pagination-btn">
+                                            <a class="button__row">
+                                                <img src="../images/row__white.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="doctor__card">
+                                    <div class="doctor__card-img">
+                                        <img src="../images/doctors__leaf.svg" alt="" class="doctors__leaf">
+                                        <img src="../images/doctor__img.png" alt="" class="doctor__card-img--img">
+                                    </div>
+                                    <div class="doctor__card-description">
+                                        <div class="doctor__card-description--info">
+                                            <div>Анастасия Александровна Кульбаба (Тарасова)</div>
+                                            <span>Гастроэнтеролог</span>
+                                        </div>     
+                                        <div class="offer__stock-description--pagination-btn">
+                                            <a class="button__row">
+                                                <img src="../images/row__white.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="doctorsSwiper--pagination">
+                            <!-- Добавление стрелок -->
+                            <div class="doctorsSwiper--pagination-buttons">
+                                <div class="doctorsSwiper-prev">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23 12.75C23.4142 12.75 23.75 12.4142 23.75 12C23.75 11.5858 23.4142 11.25 23 11.25V12.75ZM2 12L1.46967 11.4697C1.17678 11.7626 1.17678 12.2374 1.46967 12.5303L2 12ZM7.46967 18.5303C7.76256 18.8232 8.23744 18.8232 8.53033 18.5303C8.82322 18.2374 8.82322 17.7626 8.53033 17.4697L7.46967 18.5303ZM8.53033 6.53033C8.82322 6.23744 8.82322 5.76256 8.53033 5.46967C8.23744 5.17678 7.76256 5.17678 7.46967 5.46967L8.53033 6.53033ZM23 11.25H2V12.75H23V11.25ZM1.46967 12.5303L7.46967 18.5303L8.53033 17.4697L2.53033 11.4697L1.46967 12.5303ZM2.53033 12.5303L8.53033 6.53033L7.46967 5.46967L1.46967 11.4697L2.53033 12.5303Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div class="doctorsSwiper-next">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 12H23M23 12L17 6M23 12L17 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Добавление пагинации -->
+                            <div class="doctorsSwiper-pagination"></div>
+                            <div style="width: 125px;"></div>
+                        </div>
+
+                            
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+<!------------------- Блок акций ---------------------->
+
+        <section class="stocks">
+            <div class="container">
+                <div class="stocks__inner">
+                    <div class="section__header">
+                        <div class="section__header-header">
+                            <h2><p>Выгодная</p> медицина</h2>
+                        </div>
+                        <a href="" class="section__header-button">
+                            <p>Все акции</p>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 5L15 12L9 19" stroke="#11394A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+
+
+                    <div class="stocks__card">
+                        <div class="stocks__card--info">
+                            <div class="stocks__card--info-text">
+                                <h3>Получите полное обследование сердца с экономией 1400 рублей! </h3>
+                                <p>Узнайте о состоянии вашего сердца и получите рекомендации по лечению от ведущих специалистов.
+                                <br><br>Записывайтесь сейчас для здоровья своего сердца!</p>
+                            </div>
+                            <div class="stocks__card--info-buttons">
+                                <div class="stockSwiper-second-prev">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23 12.75C23.4142 12.75 23.75 12.4142 23.75 12C23.75 11.5858 23.4142 11.25 23 11.25V12.75ZM2 12L1.46967 11.4697C1.17678 11.7626 1.17678 12.2374 1.46967 12.5303L2 12ZM7.46967 18.5303C7.76256 18.8232 8.23744 18.8232 8.53033 18.5303C8.82322 18.2374 8.82322 17.7626 8.53033 17.4697L7.46967 18.5303ZM8.53033 6.53033C8.82322 6.23744 8.82322 5.76256 8.53033 5.46967C8.23744 5.17678 7.76256 5.17678 7.46967 5.46967L8.53033 6.53033ZM23 11.25H2V12.75H23V11.25ZM1.46967 12.5303L7.46967 18.5303L8.53033 17.4697L2.53033 11.4697L1.46967 12.5303ZM2.53033 12.5303L8.53033 6.53033L7.46967 5.46967L1.46967 11.4697L2.53033 12.5303Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div class="stockSwiper-second-next">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 12H23M23 12L17 6M23 12L17 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stocks__card-img">
+
+
+                            <div class="swiper stockSwiper-second">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../images/first__slide.png" alt="">
+                                        <h3>Получите полное обследование сердца с экономией 1400 рублей!</h3>
+                                        <p>Узнайте о состоянии вашего сердца и получите рекомендации по лечению от ведущих специалистов.
+                                        <br><br>Записывайтесь сейчас для здоровья своего сердца!</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../images/second__slide.png" alt="">
+                                        <h3>Получите полное обследование сердца с экономией 1400 рублей!</h3>
+                                        <p>Узнайте о состоянии вашего сердца и получите рекомендации по лечению от ведущих специалистов.
+                                        <br><br>Записывайтесь сейчас для здоровья своего сердца!</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../images/third__slide.png" alt="">
+                                        <h3>Получите полное обследование сердца с экономией 1400 рублей!</h3>
+                                        <p>Узнайте о состоянии вашего сердца и получите рекомендации по лечению от ведущих специалистов.
+                                        <br><br>Записывайтесь сейчас для здоровья своего сердца!</p>
+                                    </div>
+                                </div>        
+                            </div> 
+
+
+                        </div>
+                    </div>
+
+                    <div class="stockSwiper-second-pagination--wrapper">
+                        <div class="stockSwiper-second-pagination"></div>
+                    </div>
+                    
+                    
+
+
+                </div>
+            </div>
+        </section>
+
+
+<!------------------- Подключение блока ФОС ---------------------->
+
+        <section class="consultation">
+
+            <div class="container">
+
+                <div class="consultation__inner">
+
+                    <img class="consultation__leaf-left" src="../../images/consultation__leaf-left.svg" alt="" style="pointer-events: none;">
+
+                    <img class="consultation__leaf-right" src="../../images/consultation__leaf-right.svg" alt="" style="pointer-events: none;">
+
+                    <div class="consultation__header">
+
+                        <div class="section__header-header">
+
+                            <h2>Мы проводим <p>бесплатные</p> консультации
+
+                                по нашим услугам, чтобы вы могли подобрать то,
+
+                                что подходит <p>именно вам</p></h2>
+
+                        </div>
+
+                    </div>
+
+        
+
+                    <form action="" class="consultation__form">
+
+                        <div class="consultation__form-inputs">
+
+                            <input type="text" class="consultation__form-input" placeholder="Как к вам обращаться?">
+
+                            <div class="offer__consultation-form-input-block">
+
+                                <svg class="input__phone" width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                    <path d="M7.3462 15.0438C7.21236 18.5418 8.09786 24.4836 14.0562 30.4438C15.3541 31.7536 16.7879 32.9213 18.3334 33.9271M10.153 9.55113C12.7069 6.99729 16.7805 7.34013 18.403 10.2478L19.5929 12.3781C20.6654 14.3031 20.2345 16.8258 18.5442 18.518C18.5442 18.518 16.4909 20.5695 20.2125 24.2893C23.9287 28.0055 25.982 25.9576 25.982 25.9576C27.6742 24.2655 30.1987 23.8346 32.1219 24.9071L34.254 26.0988C37.1599 27.7195 37.5027 31.7931 34.9489 34.3488C33.4144 35.8815 31.5334 37.0768 29.4562 37.1538C27.5567 37.2195 25.6587 36.9832 23.8334 36.4535" stroke="#BCC4BC" stroke-width="2" stroke-linecap="round"/>
+
+                                </svg>
+
+                                <input type="text" class="offer__consultation-form-phone tel" placeholder="+7 (999) 999 - 99 - 99">
+
+                            </div>
+
+                        </div>
+
+                        <div class="consultation__form-btn">
+
+                            <div class="consultation__form-btn--policy">
+
+                                <label class="check-label" for="form__checkbox-popup" >
+
+                                    <span class="options__desc">
+
+                                    </span>
+
+                                    <input
+
+                                        id="form__checkbox-popup"
+
+                                        type="checkbox"
+
+                                        name="checkbox"
+
+                                    />
+
+                                    <span
+
+                                        class="fakecheck"
+
+                                    >
+
+                                        <svg
+
+                                            xmlns="http://www.w3.org/2000/svg"
+
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+
+                                            viewBox="0 0 24 24"
+
+                                            width="18px"
+
+                                            height="18px"
+
+                                            id="checkmark"
+
+                                        >
+
+                                            <polyline
+
+                                                fill="none"
+
+                                                stroke="#fff"
+
+                                                stroke-width="3"
+
+                                                stroke-linecap="round"
+
+                                                stroke-linejoin="round"
+
+                                                stroke-miterlimit="10"
+
+                                                points=" 5,12 9,16 18,8"
+
+                                            />
+
+                                        </svg>
+
+                                    </span>
+
+                                </label>
+
+                                <p>Я соглашаюсь с <a href="">политикой конфиденциальности</a></p>
+
+                            </div>
+
+                            <button class="row__button">
+
+                                <p>Получить консультацию</p>
+
+                                
+
+                                <div class="row__button-wrapper">
+
+                                    <div class="button__row">
+
+                                        <img src="../images/button__row.svg" alt="">
+
+                                    </div>
+
+                                </div>
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+<!------------------- Блок отзывов ---------------------->
+
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__inner">
+                    <div class="section__header">
+                        <div class="section__header-header">
+                            <h2>Что <p>говорят</p> о нас наши пациенты</h2>
+                        </div>
+                        <a href="" class="section__header-button">
+                            <p>Все отзывы</p>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 5L15 12L9 19" stroke="#11394A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="reviews__items">
+
+                        <div class="reviews__item">
+                            <div class="reviews__item-text">
+                                <p>Хочу выразить огромную благодарность клинике, врачам. И девочки на ресепшене очень приветливые. В Джанкое это большое спасение. Цены приемлемые.</p>
+                                <a href="#">Читать далее...</a>
+                            </div>
+                            <div class="reviews__item-author">
+                                <p>Светлана Курносенко</p>
+                                <div class="reviews__item-author-btn">
+                                    <a class="button__row">
+                                        <img src="../images/row__white.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="reviews__item">
+                            <div class="reviews__item-text">
+                                <p>Хочу выразить огромную благодарность клинике, врачам. И девочки на ресепшене очень приветливые. В Джанкое это большое спасение. Цены приемлемые.</p>
+                                <a href="#">Читать далее...</a>
+                            </div>
+                            <div class="reviews__item-author">
+                                <p>Светлана Курносенко</p>
+                                <div class="reviews__item-author-btn">
+                                    <a class="button__row">
+                                        <img src="../images/row__white.svg" alt="">
+                                    </a>    
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="reviews__item">
+                            <div class="reviews__item-text">
+                                <p>Хочу выразить огромную благодарность клинике, врачам. И девочки на ресепшене очень приветливые. В Джанкое это большое спасение. Цены приемлемые.</p>
+                                <a href="#">Читать далее...</a>
+                            </div>
+                            <div class="reviews__item-author">
+                                <p>Светлана Курносенко</p>
+                                <div class="reviews__item-author-btn">
+                                    <a class="button__row">
+                                        <img src="../images/row__white.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+
+
+                </div>
+            </div>
+        </section>
+
+        
+
+    </main>
+
+<!------------------- Подключение footer ---------------------->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer__inner">
+
+                
+
+                <div class="footer__inner--wrapper">
+
+                    <div class="footer__inner-info">
+
+                        <div class="main__ingo">
+
+                            <a class="footer__logo" href="#"><img src="../../images/logo.svg" alt=""></a>
+
+                        </div>
+
+                        <div class="footer__inner-info--text">
+
+                            <p>ОГРН: 1149102063439</p>
+
+                            <p>ИНН: 9105001618</p>
+
+                            <p>КПП: 910501001</p>
+
+                        </div>
+
+        
+
+                        <svg class="eye__button" width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                            <rect y="0.5" width="62" height="62" rx="31" fill="#EDEDED"/>
+
+                            <path d="M19.5176 26.9581C16.7227 29.1072 15 31.2719 15 31.5001C15 31.9659 22.1775 40.5001 31 40.5001C39.8225 40.5001 47 31.9659 47 31.5001C47 31.0344 39.8225 22.5001 31 22.5001C27.8086 22.5001 24.8324 23.6168 22.3333 25.0645" stroke="#11394A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <path d="M33 31.5C33 32.6046 32.1045 33.5 31 33.5C29.8955 33.5 29 32.6046 29 31.5C29 30.3954 29.8955 29.5 31 29.5C32.1045 29.5 33 30.3954 33 31.5Z" fill="#11394A"/>
+
+                            <path d="M36 31.5C36 34.2615 33.7613 36.5 31.0001 36.5C28.2387 36.5 26 34.2615 26 31.5C26 28.7385 28.2387 26.5 31.0001 26.5C33.7613 26.5 36 28.7385 36 31.5Z" stroke="#11394A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+                        </svg>
+
+                            
+
+        
+
+                        <a href="#main" class="footer__button">
+
+                            <p>Наверх</p>
+
+                            <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                <path d="M1 7L8 1L15 7" stroke="#11394A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+        
+
+        
+
+                    <div class="footer__inner-navigation">
+
+                        <div class="footer__inner-navigation--header">Навигация</div>
+
+                        <nav>
+
+                            <a href="">Услуги</a>
+
+                            <a href="">О клинике</a>
+
+                            <a href="">Пациентам</a>
+
+                            <a href="">Врачи</a>
+
+                            <a href="">Публикации</a>
+
+                            <a href="">Отзывы</a>
+
+                        </nav>
+
+                    </div>
+
+        
+
+        
+
+                    <div class="footer__inner-navigation">
+
+                        <div class="footer__inner-navigation--header">Контакты</div>
+
+                        <div class="footer__inner-navigation--contacts">
+
+                            <p>г. Джанкой, ул. Ленина, 23</p>
+
+                            <a class="footer__phone" href="tel:+79788667953">+7 (978) 866-79-53</a>
+
+                            <a class="footer__phone"  href="tel:+79787419300">+7 (978) 741-93-00</a>
+
+                            <a href="">marvaslup@mail.ru</a>
+
+                            <div>
+
+                                <p>Пн-Сб: 9:00 - 21.00</p>
+
+                                <p>Вс: 10:00 - 20:00</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+    
+
+    
+
+                <div class="policy">
+
+                    <span>Лицензия № Л041-01133-77/00366659 от 19.09.2019 г.</span>
+
+                    <a href="#">Пользовательское соглашение</a>
+
+                    <a href="#">Соглашение об обработке персональных данных</a>
+
+                </div>
+
+        
+
+                <div class="naming">
+
+                    <p>© 2018-2023 ООО "ЧИНАРА-МЕДИЦИНСКИЙ ЦЕНТР НАДЕЖДА"</p>
+
+                    <div class="builded">
+
+                        <span>Разработано:</span>
+
+                        <a href="https://arbi-m.com/" target="_blank"><img src="../../images/arbim.svg" alt=""></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>   
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

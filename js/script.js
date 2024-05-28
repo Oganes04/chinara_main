@@ -83,32 +83,14 @@ var swiper = new Swiper(".stockSwiper", {
 var firstSlideText = swiper.slides[0].querySelector('p').innerText;
 $('.offer__stock-description--text').text(firstSlideText);
 
-
-
-//============= Слайдер с врачами ===========
-
-var swiper = new Swiper(".doctorsSwiper", {
-    slidesPerView: 3,
-  slidesPerGroup: 3,
-  loop: true,
-  speed: 600,
-  spaceBetween: 30,
-  grabCursor: true,
-  pagination: {
-    el: ".doctorsSwiper-pagination",
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: ".doctorsSwiper-next",
-    prevEl: ".doctorsSwiper-prev",
-  },
-  });
+});
 
 
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
 //=================== Анимация у checkbox ============
-
 
 $(".check-label").on("click", function () {
     let isChecked = $(this).children("input").prop("checked");
@@ -118,6 +100,7 @@ $(".check-label").on("click", function () {
         $(this).find(".fakecheck").removeClass("checked");
     }
   });
+
 
 //=================== Слайдер в акциях ============
 
@@ -163,5 +146,80 @@ $('.stocks__card--info-text h3').text(firstSlideH3);
 $('.stocks__card--info-text p').text(firstSlideText);
 
 
+//============= Слайдер с врачами ===========
+
+
+var swiper = new Swiper(".doctorsSwiper", {
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  loop: true,
+  speed: 600,
+  spaceBetween: 30,
+  grabCursor: true,
+  pagination: {
+    el: ".doctorsSwiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".doctorsSwiper-next",
+    prevEl: ".doctorsSwiper-prev",
+  },
+  });
 
 });
+
+$(".dropdown__link-selector").click(function(event) {
+    event.stopPropagation(); // Предотвращает закрытие выпадающего списка при клике на ссылку
+    $(".dropdown__content-selector").slideToggle("fast");
+    $('.dropdown__link-selector  svg').toggleClass("rotate_row");
+   });
+   
+
+
+const swiper = new Swiper('.gallerySlider', {
+    loop: true,
+    slidesPerView: 2,
+    centeredSlides: true,
+    effect: "coverflow",
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+    coverflowEffect: {          // added
+        rotate: 0,              // added (Rotate of the prev and next slides)
+        depth: 230,             // added (Depth of the prev and next slides)
+        stretch: 200,            // added (Space between the slides)
+        modifier: 1,            // added (Multiply the values of rotate, depth, and stretch)
+        scale: 0.9,               // added (Size ratio of the prev and next slides)
+        slideShadows: true,    // added (Presence of shadow on the surfaces of the prev and next slides)
+    },                          // added
+
+    navigation: {
+        nextEl: ".gallerySlider-next",
+        prevEl: ".gallerySlider-prev",
+    },
+    pagination: {
+        el: ".gallerySlider-pagination",
+        clickable: true,
+      },
+})
+
+
+
+$('#radio__doctor').click(function() {
+    $('#doctorSelector').show();
+   
+
+});
+
+$('#radio__clinic').click(function() {
+  $('#doctorSelector').hide();
+
+});
+

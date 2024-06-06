@@ -14,9 +14,11 @@ $(document).ready(function() {
         if ($currentAnswer.is(':visible')) {
             $('.dropdown__row').removeClass('rotate_row');
             $currentAnswer.slideUp();
+            $('.header__nav-dropdown--header').removeClass('link__underline')
         } else {
             $('.dropdown__row').addClass('rotate_row');
             $currentAnswer.slideDown();
+            $('.header__nav-dropdown--header').addClass('link__underline')
         }
     });
 
@@ -24,12 +26,14 @@ $(document).ready(function() {
     $('.header__nav-dropdown--inner a').click(function() {
         $('.header__nav-dropdown--inner').slideUp();
         $('.dropdown__row').removeClass('rotate_row');
+        $('.header__nav-dropdown--header').removeClass('link__underline')
     });
 
     // Обработчик клика вне области .header__nav-dropdown
     $(document).click(function() {
         $('.header__nav-dropdown--inner').slideUp();
         $('.dropdown__row').removeClass('rotate_row');
+        $('.header__nav-dropdown--header').removeClass('link__underline')
     });
 
 
@@ -223,3 +227,125 @@ $('#radio__clinic').click(function() {
 
 });
 
+
+
+// Сначала скроем все ответы
+$('.faq__items-text').slideUp();
+
+$('.faq__item').click(function() {
+    // Уберем класс rotate-faq у всех SVG в заголовках вопросов
+    $('.faq__items-header svg').removeClass('rotate-faq');
+    
+    // Применим исходные стили к всем элементам
+    $('.faq__item').css('border', '1px solid transparent');
+    $('.faq__items-header').css('background-color', '#EDEDED');
+
+    // Находим текущий вопрос и ответ
+    var $currentAnswer = $(this).find('.faq__items-text');
+    var $currentQuestion = $(this).find('.faq__items-header');
+  
+    // Если текущий ответ виден, скроем его
+    if ($currentAnswer.is(':visible')) {
+        $currentAnswer.slideUp();
+    } else {
+        // Скроем все ответы, кроме текущего
+        $('.faq__items-text').not($currentAnswer).slideUp();
+        
+        // Раскроем только текущий ответ
+        $currentAnswer.slideDown();
+        
+        // Изменяем стиль для текущего вопроса
+        $currentQuestion.css('background-color', '#FFF');
+        $(this).css('border', '1px solid #79C1DC');
+        
+        // Добавляем класс rotate-faq к SVG текущего вопроса
+        $currentQuestion.find('svg').addClass('rotate-faq');
+    }
+});
+
+
+
+
+
+
+
+
+// Общие классы для пункта меню и прайс-листа
+const menuItemsSelector = '.prices__menu-item';
+const priceListsSelector = '.prices__block-price__list';
+
+
+let activeMenuItem = null;
+
+$(document).ready(function() {
+  // Получаем первый пункт меню
+  const firstMenuItem = $(menuItemsSelector).first();
+
+  // Получаем  номер прайс-листа из ID первого пункта меню
+  const listNumber = firstMenuItem.attr('id').split('-').pop();
+
+  // Показываем соответствующий прайс-лист
+  $('#price-list-' + listNumber).show();
+
+  // Добавляем класс 'rotate' к SVG элементу первого пункта меню  
+
+  // Обновляем активный пункт меню
+  activeMenuItem = firstMenuItem;
+});
+
+// Обработчик клика по пунктам меню
+$(document).on('click', menuItemsSelector, function() {
+  
+  // Скрываем все прайс-листы
+  $(priceListsSelector).hide();
+
+  // Получаем   номер прайс-листа из ID пункта меню
+  let listNumber = $(this).attr('id').split('-').pop();
+
+  // Показываем соответствующий прайс-лист
+  $('#price-list-' + listNumber).show();
+
+  // Если было ранее активное меню, удаляем у него класс 'rotate' и 'box-shadow'
+  if (activeMenuItem) {
+    activeMenuItem.find('svg').removeClass('rotate');
+    activeMenuItem.css('background-color', '#FFF');
+    activeMenuItem.css('color', '#11394A');
+    activeMenuItem.css('border-color', '#11394A');
+    activeMenuItem.find('svg path').css('stroke', '#11394A');
+  }
+
+  // Добавляем класс 'rotate' к SVG элементу текущего активного пункта меню
+  $(this).find('svg').addClass('rotate');
+  $(this).css('background-color', '#79C1DC');
+  $(this).css('border-color', '#79C1DC');
+  $(this).css('color', '#FFF');
+  $(this).find('svg path').css('stroke', '#11394A');
+  $(this).find('svg path').css('stroke', '#fff');
+
+  // Обновляем активный пункт меню
+  activeMenuItem = $(this);
+});
+
+// document.addEventListener('scroll', function () {
+//     const cards = document.querySelectorAll('.stocks__card');
+//     let scrollPosition = window.scrollY;
+
+//     cards.forEach((card, index) => {
+//         const cardHeight = card.offsetHeight;
+//         const cardTop = card.offsetTop;
+//         const offset = scrollPosition - cardTop;
+
+        
+//         if (offset >= 0) {
+//             card.style.zIndex = index; 
+//             card.style.transform = `translateY(${offset}px)`;
+//         } else {
+//             card.style.zIndex = 1;
+//             card.style.transform = `translateY(0)`;
+//         }
+
+//         if (index < cards.length - 1) {
+//             cards[index + 1].style.zIndex = parseInt(cards[index].style.zIndex) + 1;
+//         }
+//     });
+// });

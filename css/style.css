@@ -134,7 +134,6 @@ legend {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -591,7 +590,7 @@ input[type=radio]:checked {
 
 .search input {
   flex: 1;
-  padding: 20px 30px;
+  padding: clamp(17px, 1.04vw, 20px) 30px;
   border: 1px solid #BCC4BC;
   border-radius: 100px;
   font-size: clamp(16px, 1.04vw, 20px);
@@ -616,7 +615,7 @@ input[type=radio]:checked {
   font-family: Raleway-Medium;
   font-size: clamp(18px, 1.25vw, 24px);
   border-radius: 100px;
-  padding: 20px 40px;
+  padding: clamp(17px, 1.04vw, 20px) 40px;
   border: 1px solid #11394A;
   transition: all 0.3s ease;
 }
@@ -950,6 +949,13 @@ input[type=radio]:checked {
   stroke: #FFFFFF;
 }
 
+.footer__inner-info--buttons {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .footer__logo {
   cursor: pointer;
   display: block;
@@ -1244,6 +1250,7 @@ input[type=radio]:checked {
 }
 
 .stocks__card--info {
+  background-color: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1624,6 +1631,11 @@ input[type=radio]:checked {
   background-color: #BCC4BC !important;
 }
 
+.reviews__adaptive {
+  display: none;
+  margin-bottom: 40px;
+}
+
 .contacts {
   margin-bottom: 60px;
 }
@@ -1874,6 +1886,10 @@ input[type=radio]:checked {
   border-radius: 35px;
   padding: 10px;
   background-color: #FFFFFF;
+}
+
+.offer__stock-adaptive {
+  display: none;
 }
 
 .swiper-slide,
@@ -2796,6 +2812,7 @@ input[type=radio]:checked {
 .about__doctor.doctor__page .about__doctor-img {
   display: flex;
   flex-direction: column;
+  width: 31.25vw;
   max-width: 600px;
 }
 
@@ -2895,6 +2912,7 @@ input[type=radio]:checked {
 }
 
 .about__doctor.doctor__page .about__doctor-about {
+  max-height: 406px;
   margin-top: 20px;
 }
 
@@ -2920,7 +2938,7 @@ input[type=radio]:checked {
 }
 
 .about__doctor.doctor__page .about__doctor-about ul::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
   height: 200px;
   /* ширина scrollbar */
 }
@@ -4146,8 +4164,721 @@ input[type=radio]:checked {
   }
 }
 
+@media only screen and (max-width: 1248px) {
+  .publication__items .publication__item {
+    flex: 48%;
+  }
+}
+
 @media only screen and (max-width: 1240px) {
   .directions--page .directions__item-wrapper--img img {
     width: 22vw !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: none;
+    width: auto;
+    padding: 0 20px;
+  }
+
+  section .container > [class*=__inner]:not(.offer__inner) {
+    padding: 60px 20px;
+  }
+
+  .section__header-header {
+    font-size: clamp(30px, 3.9vw, 40px);
+  }
+
+  .section__header-button {
+    font-size: clamp(20px, 2.34vw, 24px);
+  }
+
+  .button {
+    font-size: clamp(16px, 1.95vw, 20px);
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .offer__consultation {
+    padding: 30px 0;
+  }
+
+  .stockSwiper {
+    height: 100%;
+  }
+
+  .stockSwiper .swiper-slide img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .offer__stock-description {
+    padding: 30px 15px;
+    height: auto;
+  }
+
+  .offer__uniqueness-block__inner--social {
+    align-items: center;
+  }
+
+  .offer__uniqueness {
+    flex-wrap: wrap;
+  }
+
+  .offer__uniqueness .offer__uniqueness-block {
+    flex: 48%;
+    max-height: 244px;
+  }
+
+  .offer__uniqueness .offer__uniqueness-block .offer__uniqueness-block__inner--text {
+    font-size: 20px;
+  }
+
+  .offer__uniqueness .offer__uniqueness-block .offer__uniqueness-block__inner--info p {
+    font-size: 48px;
+  }
+
+  .offer__uniqueness .offer__uniqueness-block .offer__uniqueness-block__inner--info span {
+    font-size: 32px;
+  }
+
+  .directions__item-header p {
+    font-size: clamp(26px, 3.125vw, 32px);
+  }
+
+  .direction__list-item {
+    font-size: clamp(20px, 2.34vw, 24px);
+  }
+
+  .directions__item:nth-child(1) .directions__item-wrapper--img img {
+    bottom: -19px;
+  }
+
+  .stocks__card {
+    height: auto;
+    min-height: auto;
+  }
+
+  .stocks__card--info {
+    padding: 30px 55px 30px 20px;
+    width: 50vw;
+  }
+
+  .stocks__inner .swiper-wrapper {
+    width: 46vw;
+  }
+
+  .stocks__card-img img {
+    width: 46vw;
+  }
+
+  .stocks__card--info p {
+    font-size: clamp(16px, 1.95vw, 20px);
+  }
+
+  .stocks__card--info {
+    height: auto;
+  }
+
+  .stocks__card--info-text p {
+    margin-bottom: 30px;
+  }
+
+  .stockSwiper-second {
+    height: 100%;
+  }
+
+  .stockSwiper-second .swiper-wrapper {
+    height: 100%;
+  }
+
+  .stockSwiper-second .swiper-wrapper img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .stocks__card-img img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .reviews .section__header .section__header-header {
+    max-width: 420px;
+    line-height: 50px;
+  }
+
+  .reviews__items .reviews__item {
+    height: auto;
+  }
+
+  .footer__inner {
+    padding: 40px 20px;
+  }
+
+  .footer__inner .footer__inner--wrapper {
+    margin-bottom: 40px;
+  }
+
+  .footer__inner .policy {
+    padding-bottom: 30px;
+  }
+
+  .footer__inner .policy span {
+    max-width: 300px;
+  }
+
+  .footer__inner .naming {
+    padding-top: 20px;
+  }
+
+  .directions--page .directions__items .directions__item h3 {
+    font-size: clamp(24px, 3.125vw, 32px);
+  }
+
+  .taking_tests.about__clinic-page .taking_tests-form {
+    padding: 30px 35px 30px 15px;
+  }
+
+  .taking_tests.about__clinic-page .taking_tests-text {
+    margin-bottom: 40px;
+  }
+
+  .taking_tests.about__clinic-page .taking_tests-img img {
+    height: 100%;
+    -o-object-fit: fill;
+    object-fit: fill;
+    width: 46vw;
+    max-width: 482px;
+    border-radius: 35px;
+  }
+
+  .about__clinic-info-wrapper {
+    flex-direction: column;
+  }
+
+  .about__clinic-cards {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .about__clinic-cards .about__clinic-card {
+    flex: 47%;
+    max-width: 462px;
+  }
+
+  .about__clinic-cards .about__clinic-card:nth-child(3) {
+    flex: 100%;
+  }
+
+  .faq__items-header p {
+    max-width: 95%;
+  }
+
+  .prices__block-menu .prices__menu-item {
+    width: 40vw;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item p {
+    max-width: 80%;
+  }
+
+  .publication__items .publication__item .publication__info-row span {
+    font-size: clamp(16px, 1.95vw, 20px);
+  }
+
+  .publication__items .publication__item h4 {
+    font-size: clamp(20px, 2.34vw, 24px);
+  }
+
+  .publication__items .publication__item .publication__info-text {
+    font-size: clamp(14px, 1.75vw, 18px);
+  }
+
+  .publication__items .publication__item .publication__info {
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .doctors .section__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .doctors .section__header .section__header-button {
+    margin-left: auto;
+  }
+
+  .stocks__card--info {
+    padding: 30px 90px 30px 20px;
+    width: 50%;
+  }
+
+  .stocks__inner .swiper-wrapper {
+    width: 45%;
+  }
+
+  .stocks__card-img {
+    width: 50%;
+  }
+
+  .about__direcrion .section__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .about__direcrion .section__header .section__header-button {
+    margin-left: auto;
+  }
+
+  .direction__page .taking_tests-inner .taking_tests-text {
+    font-size: clamp(16px, 1.95vw, 20px);
+  }
+
+  .about__direcrion-inner {
+    padding: 20px;
+    padding-bottom: 140px;
+  }
+
+  .about__direcrion-info {
+    flex-direction: column;
+  }
+
+  .about__direcrion-info .about__direcrion-info--col .about__direcrion-definition,
+  .about__direcrion-info .about__direcrion-heal p,
+  .about__direcrion-info .about__direcrion-heal ul {
+    font-size: clamp(20px, 2.34vw, 24px);
+  }
+
+  .about__direcrion-info .about__direcrion-info--col .about__direcrion-symptoms h3,
+  .tests__prices-list .tests__prices-item .tests__prices-item-text h3 {
+    font-size: clamp(24px, 3.125vw, 32px);
+  }
+
+  .tests__prices-list .tests__prices-item .tests__prices-item-text p {
+    font-size: clamp(16px, 1.95vw, 20px);
+  }
+
+  .about__doctor.doctor__page .about__doctor-img {
+    flex: 1;
+    width: 47vw;
+  }
+
+  .about__doctor.doctor__page .about__doctor-info {
+    max-width: 482px;
+    padding: 40px 20px;
+    flex: 1;
+  }
+
+  .about__doctor.doctor__page .about__doctor-info .about__doctor-info--row {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .about__doctor.doctor__page .about__doctor-info .about__doctor-info--row span {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .documents .section__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .documents .section__header .section__header-button {
+    margin-left: auto;
+  }
+
+  .publication__item {
+    flex: 1;
+    width: 100%;
+    max-width: none;
+  }
+
+  .publication__items .publication__item {
+    flex: auto;
+    width: 100%;
+    max-width: none;
+  }
+
+  .publication__items .publication__item .publication__img {
+    max-width: none;
+  }
+
+  .publication__items .publication__item .publication__img img {
+    width: 100%;
+  }
+
+  .publication__items .publication__item .publication__info-text {
+    max-width: none;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .stocks__card--info {
+    padding: 30px 165px 30px 20px;
+    width: 36vw;
+    max-width: 50%;
+  }
+
+  .footer__inner .policy {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .offer__main {
+    flex-direction: column;
+  }
+
+  .offer__main .offer__consultation-wrapper {
+    max-width: none;
+    padding: 30px 15px;
+  }
+
+  .stockSwiper {
+    min-height: 420px;
+  }
+
+  .offer__consultation {
+    width: 100%;
+  }
+
+  .offer__stock {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .reviews {
+    display: none;
+  }
+
+  .reviews__adaptive .section__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .reviews__adaptive .section__header .section__header-button {
+    margin-left: auto;
+  }
+
+  .reviews__adaptive {
+    display: block;
+  }
+
+  .reviews__adaptive .swiper-slide p {
+    display: block;
+  }
+
+  .reviews__adaptive .swiper-slide img {
+    border-radius: 0;
+  }
+
+  .reviews__adaptive .reviews__item-text {
+    padding: 30px 20px;
+  }
+
+  .reviews__adaptive .reviews__item-author p {
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  .reviewsSwiper-pagination {
+    text-align: center;
+  }
+
+  .reviewsSwiper {
+    margin-bottom: 20px;
+    padding-bottom: 15px !important;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 48px !important;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .consultation__form-inputs {
+    flex-wrap: wrap;
+  }
+
+  .consultation__form-btn--policy p {
+    max-width: 250px;
+  }
+
+  .stocks__card {
+    max-height: none;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .stocks__card .stocks__card-img {
+    position: relative;
+    width: 100%;
+  }
+
+  .stocks__card .stocks__card-img img {
+    width: 100%;
+  }
+
+  .stocks__card .stocks__card--info {
+    width: 100%;
+    max-width: none;
+    padding: 30px 15px;
+    min-width: 0;
+    margin-top: -30px;
+    z-index: 20;
+  }
+
+  .footer__inner--wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__inner .policy {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer__inner .naming {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__inner .naming > p {
+    margin-bottom: 20px;
+  }
+
+  .footer__inner .naming .builded {
+    margin: 0 auto;
+  }
+
+  .footer__inner-info--buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .footer__inner-info {
+    margin-bottom: 60px;
+  }
+
+  .footer__inner-info--text {
+    margin-bottom: 20px;
+  }
+
+  .footer__inner-navigation:nth-child(1) {
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .offer__uniqueness {
+    flex-direction: column;
+  }
+
+  .offer__uniqueness .offer__uniqueness-block {
+    flex: auto;
+  }
+
+  .stocks .section__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .stocks .section__header .section__header-button {
+    margin-left: auto;
+  }
+
+  .consultation__form-btn--policy p {
+    max-width: none;
+  }
+
+  .consultation__form-btn--policy {
+    margin-bottom: 20px;
+  }
+
+  .consultation__form-btn {
+    flex-direction: column;
+  }
+
+  .directions__items {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: none;
+    width: auto;
+    padding: 0 10px;
+  }
+
+  .input__number {
+    padding: 10px 20px 10px 10px;
+    gap: 10px;
+  }
+
+  .input__number svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .input__number input {
+    font-size: 18px;
+  }
+
+  .button {
+    padding: 2px 2px 2px 20px;
+  }
+
+  .section__header {
+    margin-bottom: 50px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section__header .section__header-button {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    margin-left: auto;
+  }
+
+  .section__header .section__header-button p {
+    position: relative;
+    font-size: 18px;
+  }
+
+  .section__header .section__header-button p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #11394A;
+  }
+
+  .section__header-header h2 {
+    font-size: 26px;
+  }
+
+  .offer__consultation {
+    padding: 0;
+  }
+
+  .offer__stock-description--pagination {
+    flex-wrap: wrap;
+  }
+
+  .offer__stock-description--pagination .swiper-pagination {
+    order: 3;
+    width: 100% !important;
+  }
+
+  .offer__stock-description {
+    max-height: none;
+    padding: 30px 15px 15px;
+  }
+
+  .offer__stock-description--text {
+    -webkit-line-clamp: 3;
+  }
+
+  .offer__uniqueness-block:nth-child(4) {
+    max-height: 128px;
+  }
+
+  .doctorsSwiper--pagination-buttons {
+    display: none;
+  }
+
+  .offer__uniqueness-block {
+    padding: 20px 15px;
+  }
+
+  .offer__uniqueness-block .offer__uniqueness-block__inner--text {
+    font-size: 18px;
+  }
+
+  .directions .section__header-header b {
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  .directions__item {
+    padding: 30px 20px;
+  }
+
+  .directions__item-diagnostics {
+    padding: 30px 20px;
+  }
+
+  .directions__item-header svg {
+    width: 22px;
+  }
+
+  .direction__list {
+    margin-bottom: 20px;
+  }
+
+  .directions__item-wrapper--img {
+    height: 180px;
+  }
+
+  .directions__items .direction__btn {
+    padding: 15px 20px;
+  }
+
+  .directions__items .directions__item:nth-child(1) .directions__item-wrapper--img img {
+    width: 62vw;
+    transform: rotate(15deg);
+    bottom: -8px;
+    right: -26px;
+  }
+
+  .consultation .consultation__inner {
+    padding: 40px 15px !important;
+  }
+
+  .consultation .consultation__header {
+    margin-bottom: 40px;
+  }
+
+  .consultation .section__header-header h2 {
+    font-size: 32px;
+  }
+
+  .consultation .consultation__form-inputs {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .consultation .button {
+    gap: 10px;
+  }
+
+  .consultation .button span {
+    white-space: nowrap;
+    letter-spacing: normal;
   }
 }

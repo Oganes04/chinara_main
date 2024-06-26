@@ -169,9 +169,54 @@ var swiper = new Swiper(".doctorsSwiper", {
     nextEl: ".doctorsSwiper-next",
     prevEl: ".doctorsSwiper-prev",
   },
+  breakpoints: {
+
+    1200: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    600: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+ }
   });
 
 });
+
+var reviewsSwiper = new Swiper(".reviewsSwiper", {
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  loop: true,
+  speed: 600,
+  spaceBetween: 30,
+  grabCursor: true,
+  pagination: {
+    el: ".reviewsSwiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+
+  600: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+ }
+  });
+
+
+
 
 $(".dropdown__link-selector").click(function(event) {
     event.stopPropagation(); // Предотвращает закрытие выпадающего списка при клике на ссылку

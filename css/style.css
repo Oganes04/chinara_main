@@ -4868,6 +4868,10 @@ input[type=radio]:checked {
     font-size: 32px;
   }
 
+  .consultation .section__header-header h2 b {
+    white-space: nowrap;
+  }
+
   .consultation .consultation__form-inputs {
     flex-wrap: nowrap;
     flex-direction: column;

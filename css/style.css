@@ -4754,6 +4754,7 @@ input[type=radio]:checked {
     margin-bottom: 50px;
     flex-direction: column;
     gap: 20px;
+    align-items: flex-start;
   }
 
   .section__header .section__header-button {

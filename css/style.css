@@ -1326,6 +1326,10 @@ input[type=radio]:checked {
   background-color: #FFFFFF;
 }
 
+.doctors__inner .section__header-header-adaptive {
+  display: none;
+}
+
 .doctor__card {
   cursor: pointer;
 }
@@ -4687,6 +4691,11 @@ input[type=radio]:checked {
   .footer__inner-navigation:nth-child(1) {
     margin-bottom: 60px;
   }
+
+  .directions--page .section__header-header b {
+    margin-top: 10px;
+    display: inline-block;
+  }
 }
 
 @media only screen and (max-width: 690px) {
@@ -4723,9 +4732,32 @@ input[type=radio]:checked {
   .directions__items {
     flex-direction: column;
   }
+
+  .directions--page .directions__items .directions__item {
+    width: 100%;
+    flex: auto;
+    max-width: none;
+  }
+
+  .directions--page .directions__items .directions__item .directions__item-img {
+    max-width: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  .doctors__inner .section__header-header {
+    display: none;
+  }
+
+  .doctors__inner .section__header-header-adaptive {
+    display: block;
+  }
+
+  .doctors__inner .section__header-header-adaptive h2 b {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
   .container {
     max-width: none;
     width: auto;
@@ -4744,6 +4776,11 @@ input[type=radio]:checked {
 
   .input__number input {
     font-size: 18px;
+    min-width: 198px;
+  }
+
+  .input__text {
+    padding: 18px 20px;
   }
 
   .button {
@@ -4781,6 +4818,10 @@ input[type=radio]:checked {
 
   .section__header-header h2 {
     font-size: 26px;
+  }
+
+  .offer {
+    margin-bottom: 40px;
   }
 
   .offer__consultation {
@@ -4822,7 +4863,7 @@ input[type=radio]:checked {
   }
 
   .directions .section__header-header b {
-    margin-top: 15px;
+    margin-top: 10px;
     display: inline-block;
   }
 
@@ -4857,6 +4898,10 @@ input[type=radio]:checked {
     right: -26px;
   }
 
+  section .container > [class*=__inner]:not(.offer__inner) {
+    padding: 40px 15px;
+  }
+
   .consultation .consultation__inner {
     padding: 40px 15px !important;
   }
@@ -4876,6 +4921,12 @@ input[type=radio]:checked {
   .consultation .consultation__form-inputs {
     flex-wrap: nowrap;
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .consultation .consultation__form-inputs .input__text,
+  .consultation .consultation__form-inputs .input__number {
+    width: 100%;
   }
 
   .consultation .button {
@@ -4885,5 +4936,33 @@ input[type=radio]:checked {
   .consultation .button span {
     white-space: nowrap;
     letter-spacing: normal;
+  }
+
+  .doctorsSwiper--pagination,
+  .doctorsSwiper-pagination {
+    display: block !important;
+    text-align: center;
+  }
+
+  .doctor__card-description {
+    padding: 30px 10px 10px 15px;
+  }
+
+  .stocks .section__header-header b {
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  .reviews__adaptive .section__header-header h2 {
+    max-width: 200px;
+  }
+
+  .reviews__adaptive .section__header-header b {
+    display: inline-block;
+  }
+
+  .directions--page .directions__items .directions__item {
+    width: 100%;
+    flex: auto;
   }
 }

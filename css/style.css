@@ -4979,13 +4979,13 @@ input[type=radio]:checked {
   }
 
   .directions__item.directions__item-flex .directions__item-leaf:nth-child(1) {
-    width: 752px !important;
-    height: 486px !important;
-    top: 62px !important;
-    right: -17px !important;
+    width: 794px !important;
+    height: 548px !important;
+    top: 73px !important;
+    right: -26px !important;
   }
 
-  .directions__item.directions__item-flex .directions__item-leaf:nth-child(1) {
+  .directions__item.directions__item-flex .directions__item-analyzes .directions__item-leaf {
     width: 794px !important;
     height: 548px !important;
     top: -21px !important;

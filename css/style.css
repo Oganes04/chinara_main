@@ -4937,6 +4937,11 @@ input[type=radio]:checked {
     font-size: 18px;
   }
 
+  .offer__uniqueness-block--leaf {
+    bottom: 20px;
+    left: 15px;
+  }
+
   .directions .section__header-header b {
     margin-top: 10px;
     display: inline-block;

@@ -421,3 +421,17 @@ $("#burger_menu").click(function() {
   $("body").toggleClass("site__fixed");
 });
 
+ // Получаем позицию верхней границы элемента .header относительно окна браузера
+ const minScroll = $('.header').offset().top;
+
+ console.log(minScroll);
+
+ $(window).on('scroll', function(e) {
+   let y = $(this).scrollTop();
+
+   if (y > 0) {
+     $('.header__inner').addClass('navbar-shadow');
+   } else {
+     $('.header__inner').removeClass('navbar-shadow');
+   }
+ });

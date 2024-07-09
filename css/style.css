@@ -707,8 +707,39 @@ input[type=radio]:checked {
   font-family: Raleway-Semibold;
 }
 
+html,
+body {
+  max-width: 100vw;
+  overflow-y: scroll;
+}
+
+.site__fixed {
+  position: fixed;
+}
+
+.header__nav-adaptive::-webkit-scrollbar {
+  width: 10px;
+  height: 200px;
+  /* ширина scrollbar */
+}
+
+.header__nav-adaptive::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  /* цвет дорожки */
+}
+
+.header__nav-adaptive::-webkit-scrollbar-thumb {
+  background-color: #79C1DC;
+  /* цвет плашки */
+  border-radius: 4px;
+  /* закругления плашки */
+}
+
 .header {
   margin-bottom: 20px;
+  position: sticky;
+  top: 20px;
+  z-index: 200;
 }
 
 .header__inner {
@@ -721,6 +752,18 @@ input[type=radio]:checked {
   border-radius: 35px;
 }
 
+.header__inner .header__logo {
+  max-width: 213px;
+  width: 11vw;
+  min-width: 140px;
+}
+
+.header__inner .eye__button {
+  min-width: 52px;
+  max-width: 64px;
+  width: 3.33vw;
+}
+
 .header__nav {
   display: flex;
   align-items: center;
@@ -730,7 +773,7 @@ input[type=radio]:checked {
 .header__nav-link {
   position: relative;
   font-family: Raleway-Medium;
-  font-size: clamp(16px, 1.04vw, 20px);
+  font-size: clamp(13px, 1.04vw, 20px);
   color: #11394A;
   letter-spacing: 2%;
   line-height: 130%;
@@ -846,6 +889,115 @@ input[type=radio]:checked {
 
 .header__eye {
   cursor: pointer;
+}
+
+.header__burger-menu {
+  background-color: #79C1DC;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  display: none;
+}
+
+#burger_menu {
+  z-index: 100;
+  width: 26px;
+  height: 23px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+#burger_menu span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+#burger_menu span:nth-child(1) {
+  top: 0px;
+}
+
+#burger_menu span:nth-child(2),
+#burger_menu span:nth-child(3) {
+  top: 10px;
+}
+
+#burger_menu span:nth-child(4) {
+  top: 20px;
+}
+
+#burger_menu.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#burger_menu.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+#burger_menu.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+#burger_menu.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.header__nav-adaptive {
+  position: absolute;
+  transform: translateX(-100vw);
+  width: 100vw;
+  height: 120vh;
+  transition: all 0.5s ease;
+  background-color: #F5FAFA;
+  z-index: 20;
+  padding: 40px 0 240px;
+  overflow-y: auto;
+}
+
+.header__nav-adaptive .header__nav-dropdown--inner {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: auto;
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: 0px;
+}
+
+.header__nav-adaptive .header__nav-dropdown--header {
+  justify-content: center;
+}
+
+.header__nav-adaptive .header__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header__nav-adaptive .header__nav-link,
+.header__nav-adaptive .header__nav .header__nav-dropdown--header {
+  padding: 15px 0;
+  font-size: 24px;
+}
+
+.header__nav-adaptive.open {
+  transform: translateX(0);
 }
 
 .footer__inner--wrapper {
@@ -1691,7 +1843,7 @@ input[type=radio]:checked {
   border-right: 1px solid #BCC4BC;
 }
 
-.contact__address-text h3 {
+.contact__address-text-wrapper h3 {
   font-family: Raleway-Semibold;
   font-size: clamp(24px, 1.666vw, 32px);
   color: #11394A;
@@ -1699,7 +1851,7 @@ input[type=radio]:checked {
   margin-bottom: 10px;
 }
 
-.contact__address-text > p {
+.contact__address-text-wrapper > p {
   font-family: Raleway-Regular;
   font-size: clamp(16px, 1.04vw, 20px);
   color: #11394A;
@@ -1707,7 +1859,7 @@ input[type=radio]:checked {
   margin-bottom: 40px;
 }
 
-.contact__address-text .section__header-button {
+.contact__address-text-wrapper .section__header-button {
   width: -moz-max-content;
   width: max-content;
   font-size: clamp(12px, 1.04vw, 20px);
@@ -3170,10 +3322,6 @@ input[type=radio]:checked {
   margin-bottom: 2px;
 }
 
-.document__items .document__item .document__info p:nth-child(2) {
-  margin-top: 20px;
-}
-
 .document__items .document__item .document__info span {
   font-family: Raleway-Regular;
   font-size: clamp(20px, 1.25vw, 24px);
@@ -3186,6 +3334,10 @@ input[type=radio]:checked {
 
 .document__items .document__item .button:hover .button__icon img {
   transform: rotate(0deg);
+}
+
+.document__items .document__item .document__info p:nth-child(4) {
+  margin-top: 20px;
 }
 
 .vacansy__inner {
@@ -4170,13 +4322,41 @@ input[type=radio]:checked {
   justify-content: flex-end;
 }
 
+.gallerySlideradaptive {
+  display: none !important;
+}
+
+.about__doctor.doctor__page.adaptive__show {
+  display: none;
+}
+
 @media only screen and (max-width: 1400px) {
   .reviews__item-author p {
     max-width: 150px;
   }
 
+  .header__nav {
+    gap: 20px;
+  }
+
+  .header__btn {
+    gap: 15px;
+  }
+}
+
+@media only screen and (max-width: 1360px) {
   .directions--page .directions__item-wrapper--img img {
     width: 19vw !important;
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  .vacansy__inner .vacansy__card-info {
+    padding-right: 120px;
+  }
+
+  .vacansy__inner .vacansy__card-row:nth-child(1) h3 {
+    max-width: 420px;
   }
 }
 
@@ -4217,6 +4397,27 @@ input[type=radio]:checked {
 
   .header__nav {
     display: none;
+  }
+
+  .header__inner .header__logo {
+    width: 221px;
+  }
+
+  .header__button {
+    height: 64px;
+  }
+
+  .header__inner .eye__button {
+    width: 64px;
+  }
+
+  .header__btn {
+    gap: 30px;
+  }
+
+  .header__burger-menu {
+    display: flex;
+    margin-left: 30px;
   }
 
   .offer__consultation {
@@ -4421,9 +4622,65 @@ input[type=radio]:checked {
   .publication__items .publication__item .publication__info {
     height: 320px;
   }
+
+  .vacansy__card-img {
+    width: 38vw;
+    height: 360px;
+  }
+
+  .vacansy__card-img img {
+    width: 100%;
+  }
+
+  .vacansy__card-info {
+    height: 360px !important;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  .vacansy__inner .vacansy__card-info {
+    padding-right: 160px;
+  }
+
+  .vacansy__inner .vacansy__card-row:nth-child(1) p {
+    width: 186px;
+  }
+
+  .vacansy__inner .vacansy__card-row:nth-child(1) h3 {
+    max-width: 419px;
+  }
+}
+
+@media only screen and (max-width: 1090px) {
+  .document__items {
+    gap: 40px;
+  }
+
+  .document__item {
+    flex-wrap: wrap;
+  }
+
+  .document__item .button {
+    margin-left: 281px !important;
+    margin-top: -52px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .vacansy__inner .vacansy__card-info {
+    padding-right: 180px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
+  .gallerySlideradaptive {
+    display: block !important;
+  }
+
+  .gallerySlider {
+    display: none !important;
+  }
+
   .doctors .section__header {
     flex-direction: column;
     align-items: flex-start;
@@ -4539,6 +4796,172 @@ input[type=radio]:checked {
   .publication__items .publication__item .publication__info-text {
     max-width: none;
   }
+
+  .directions--page .section__header {
+    align-items: flex-start;
+  }
+
+  .directions--page .section__header .section__header-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .directions--page .directions__items .directions__item-leaf {
+    left: 186px !important;
+    width: 287px;
+    height: 164px;
+  }
+
+  .direction__page .taking_tests-inner .taking_tests-form {
+    padding: 30px 15px;
+  }
+
+  .direction__page .about__direcrion-inner {
+    padding: 60px 20px;
+    padding-bottom: 120px;
+  }
+
+  .about__direcrion-info .about__direcrion-info--col {
+    max-width: none;
+  }
+
+  .tests__prices-list .tests__prices-item {
+    flex-wrap: wrap;
+  }
+
+  .tests__prices-list .tests__prices-item .tests__prices-item-text {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 20px;
+  }
+
+  .tests__prices-inner {
+    padding: 60px 20px;
+  }
+
+  .doctors__page .tests__prices-search button {
+    display: none;
+  }
+
+  .taking_tests.about__clinic-page .taking_tests-img img {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .about__clinic-info-inner {
+    padding: 40px 20px;
+  }
+
+  .about__clinic-info-wrapper .about__clinic-cards {
+    align-items: stretch;
+  }
+
+  .taking_tests.about__clinic-page .taking_tests-inner {
+    margin-bottom: 40px;
+  }
+
+  .taking_tests.about__clinic-page ~ .contacts {
+    margin-bottom: 40px;
+  }
+
+  .about__clinic-info-wrapper p {
+    font-size: clamp(20px, 2.34vw, 24px);
+  }
+
+  .about__clinic-gallery .about__clinic-gallery-inner {
+    padding: 120px 20px 100px;
+  }
+
+  .gallerySlideradaptive .swiper-wrapper {
+    border-radius: 25px !important;
+  }
+
+  .gallerySlideradaptive .swiper-slide {
+    border-radius: 25px !important;
+  }
+
+  .vacansy__card-img {
+    position: relative;
+    max-width: none;
+    width: 100%;
+    max-height: 462px;
+    height: 45vw;
+  }
+
+  .stockSwiper-second .swiper-wrapper img {
+    max-width: none;
+  }
+
+  .vacansy__inner .vacansy__card-info {
+    max-width: none;
+    min-width: 0;
+    width: 100%;
+    padding: 70px 20px 60px;
+    margin-top: -40px;
+    max-height: none;
+    min-height: 0;
+    height: auto !important;
+  }
+
+  .vacansy__card {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .vacansy__inner .vacansy__card-row:nth-child(1) p {
+    font-size: 20px;
+  }
+
+  .contacts__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts__map {
+    width: 100%;
+  }
+
+  .contacts__info iframe {
+    width: 100%;
+    max-width: none;
+    height: 58.5vw;
+    max-height: 600px;
+  }
+
+  .contact__info-block {
+    width: 100%;
+  }
+
+  .contact__form-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .vacansy__inner .vacansy__card-row:nth-child(1) h3 {
+    font-size: clamp(21px, 3.125vw, 32px);
+    max-width: 540px;
+  }
+
+  .vacansy__inner .vacansy__card-col ul li {
+    font-size: clamp(11px, 1.75vw, 18px);
+  }
+
+  .contact__address-time-wrapper {
+    margin-left: auto;
+    width: 356px;
+  }
+
+  .contact__address-text-wrapper {
+    width: 356px;
+    margin-right: auto;
+  }
+
+  .button__adaptive-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: 950px) {
@@ -4552,6 +4975,16 @@ input[type=radio]:checked {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+  }
+
+  .about__doctor.doctor__page .about__doctor-info--row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .about__doctor.doctor__page .about__doctor-info .about__doctor-info--row {
+    gap: 10px;
   }
 }
 
@@ -4576,9 +5009,33 @@ input[type=radio]:checked {
   .offer__stock {
     width: 100%;
   }
+
+  .direction__page .taking_tests-inner {
+    flex-direction: column-reverse;
+  }
+
+  .direction__page .taking_tests-inner .taking_tests-form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .tests__prices-search {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .tests__prices-search input {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 890px) {
+  .header__inner .eye__button,
+  .header__button {
+    display: none;
+  }
+
   .reviews {
     display: none;
   }
@@ -4627,6 +5084,10 @@ input[type=radio]:checked {
     width: 48px !important;
   }
 
+  .contact__address-time-wrapper {
+    width: auto;
+  }
+
   .directions__item-wrapper--img {
     display: none;
   }
@@ -4643,6 +5104,101 @@ input[type=radio]:checked {
     right: -125px !important;
     height: 216px !important;
     width: 281px !important;
+  }
+
+  .about__doctor.doctor__page .adaptive__hidden {
+    display: none;
+  }
+
+  .about__doctor.doctor__page .about__doctor-img {
+    width: 43vw;
+  }
+
+  .about__doctor.doctor__page .about__doctor-img img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .about__doctor.doctor__page {
+    margin-bottom: 10px;
+  }
+
+  .about__doctor.doctor__page.adaptive__show {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .about__doctor.doctor__page.adaptive__show .about__doctor-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .about__doctor.doctor__page.adaptive__show .about__doctor-img {
+    max-width: none;
+    width: 100%;
+  }
+
+  .about__doctor.doctor__page.adaptive__show .about__doctor-about {
+    background-color: #fff;
+    border-radius: 35px;
+    padding: 40px 20px;
+    margin-top: 0;
+  }
+
+  .vacansy__inner .vacansy__card-row:nth-child(1) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .vacansy__inner .vacansy__card-row:nth-child(1) h3 {
+    width: 100%;
+    max-width: none;
+  }
+
+  .contact__form-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .contact__form .consultation__form-btn--policy {
+    margin-bottom: 0;
+  }
+
+  .contact__form-inputs {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .contact__form-inputs .input__text,
+  .contact__form-inputs .input__number {
+    width: 100%;
+  }
+
+  .contact__work-time {
+    margin-bottom: 20px;
+  }
+
+  .contact__phone {
+    margin-bottom: 20px;
+  }
+
+  .contact__address {
+    margin-bottom: 30px;
+  }
+
+  .about__clinic-info-wrapper p {
+    word-wrap: break-word;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .document__items .document__item .document__info {
+    max-width: 380px;
   }
 }
 
@@ -4751,6 +5307,66 @@ input[type=radio]:checked {
     margin-top: 10px;
     display: inline-block;
   }
+
+  .taking_tests.about__clinic-page .taking_tests-inner {
+    flex-direction: column-reverse;
+  }
+
+  .taking_tests.about__clinic-page .taking_tests-img img {
+    width: 100%;
+    max-width: none;
+  }
+
+  .taking_tests.about__clinic-page .taking_tests-form {
+    padding: 40px 15px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .document__items {
+    gap: 60px;
+  }
+
+  .document__items .document__item {
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+  }
+
+  .document__item .button {
+    margin-left: 0 !important;
+    margin-top: 0;
+  }
+
+  .document__items .document__item .document__info {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .contact__address {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact__address .contact__address-text {
+    width: 100%;
+    flex: none;
+    padding-right: 0;
+    padding-bottom: 20px;
+    border-right: none;
+    border-bottom: 1px solid #BCC4BC;
+  }
+
+  .contact__address .contact__address-text .contact__address-text-wrapper {
+    width: auto;
+  }
+
+  .contact__address .contact__address-time {
+    flex: none;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 0;
+  }
 }
 
 @media only screen and (max-width: 690px) {
@@ -4816,6 +5432,18 @@ input[type=radio]:checked {
 
   .directions--page .directions__items .directions__item .directions__item-img {
     max-width: none;
+  }
+
+  .directions--page .directions__item-wrapper--img img {
+    width: 41vw !important;
+  }
+
+  .tests__prices-pagination {
+    display: none;
+  }
+
+  .search button {
+    display: none;
   }
 }
 
@@ -4919,6 +5547,10 @@ input[type=radio]:checked {
 
   .offer__stock-description--text {
     -webkit-line-clamp: 3;
+  }
+
+  .offer__uniqueness {
+    gap: 10px;
   }
 
   .offer__uniqueness-block:nth-child(4) {
@@ -5030,6 +5662,7 @@ input[type=radio]:checked {
 
   .consultation .button {
     gap: 10px;
+    margin: 0 auto;
   }
 
   .consultation .button span {
@@ -5060,8 +5693,209 @@ input[type=radio]:checked {
     display: inline-block;
   }
 
+  .footer__inner-info--buttons .eye__button {
+    min-width: 52px;
+  }
+
   .directions--page .directions__items .directions__item {
     width: 100%;
+    flex: auto;
+  }
+
+  .directions--page .section__header {
+    margin-bottom: 60px;
+  }
+
+  .directions--page .section__header .section__header-buttons {
+    flex-direction: row;
+  }
+
+  .directions--page .directions__item-wrapper--img img {
+    width: 81vw !important;
+    right: -42px;
+  }
+
+  .tests__prices-list .tests__prices-item {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .tests__prices-list .tests__prices-item .tests__prices-item-text {
+    margin-bottom: 0;
+  }
+
+  .tests__prices-list .tests__prices-item .tests__prices-item-price {
+    font-size: 40px;
+  }
+
+  .tests__prices-item-button {
+    width: 100%;
+  }
+
+  .tests__prices-item-button .button {
+    width: auto;
+    max-width: 270px;
+    margin: 0 auto;
+  }
+
+  .tests__prices-item-button .button span {
+    margin: 0 auto;
+  }
+
+  .about__direcrion-inner,
+  .tests__prices-inner,
+  .direction__page .about__direcrion-inner {
+    padding: 40px 15px;
+  }
+
+  .about__direcrion-inner .about__direcrion-inner {
+    padding-bottom: 120px;
+  }
+
+  .tests__prices .section__header {
+    margin-bottom: 40px;
+  }
+
+  .tests__prices .section__header .section__header-header h2 {
+    max-width: 200px;
+  }
+
+  .tests__prices .section__header .section__header-header h2 b {
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+
+  .direction__page .section__header-header b {
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  .direction__page .search {
+    margin-bottom: 0;
+  }
+
+  .direction__page .taking_tests-inner .taking_tests-form,
+  .direction__page .taking_tests-inner .taking_tests-img img {
+    height: 250px;
+  }
+
+  .direction__page .taking_tests-inner .taking_tests-form {
+    padding: 40px 15px;
+  }
+
+  .direction__page .taking_tests-inner {
+    margin-bottom: 40px;
+  }
+
+  .doctors.doctors__page .dropdown {
+    min-width: 270px;
+  }
+
+  .doctors.doctors__page .doctors__inner .section__header-header {
+    display: block;
+  }
+
+  .doctors.doctors__page .doctors__leaf {
+    display: none;
+  }
+
+  .about__doctor.doctor__page {
+    margin-bottom: 40px;
+  }
+
+  .about__doctor.doctor__page .about__doctor-inner {
+    flex-direction: column;
+  }
+
+  .about__doctor.doctor__page .about__doctor-img {
+    width: 100%;
+    flex: none;
+  }
+
+  .about__doctor.doctor__page .about__doctor-info .about__doctor-info--row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about__doctor.doctor__page .about__doctor-info .about__doctor-info--row:nth-child(3) {
+    margin-bottom: 30px;
+  }
+
+  .about__doctor.doctor__page .about__doctor-about {
+    max-height: none;
+  }
+
+  .about__doctor.doctor__page .about__doctor-about ul {
+    max-height: none;
+  }
+
+  .about__doctor.doctor__page + .about__direcrion .section__header-header b {
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  .about__doctor.doctor__page ~ .reviews__adaptive {
+    margin-bottom: 20px;
+  }
+
+  .about__doctor.doctor__page ~ .tests__prices .section__header-header b {
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  .about__doctor.doctor__page .adaptive__hidden {
+    display: block;
+  }
+
+  .about__doctor.doctor__page.adaptive__show {
+    display: none;
+  }
+
+  .about__doctor.doctor__page .about__doctor-info {
+    max-width: none;
+  }
+
+  .documents .section__header {
+    margin-bottom: 60px;
+  }
+
+  .documents .section__header .section__header-header h2 {
+    max-width: 240px;
+    font-size: 32px;
+  }
+
+  .documents .section__header .section__header-header b {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  .vacansy__inner .vacansy__card--info-buttons {
+    display: none;
+  }
+
+  .vacansy__inner .vacansy__card-text {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .vacansy .section__header .section__header-header h2 {
+    max-width: 176px;
+    font-size: 32px;
+  }
+
+  .vacansy .section__header .section__header-header b {
+    display: inline-block;
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .doctors.doctors__page .doctor__cards .doctor__card {
+    max-width: none;
+    width: auto;
     flex: auto;
   }
 }

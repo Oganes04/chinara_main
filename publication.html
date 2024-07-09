@@ -91,13 +91,81 @@
 
                     <div class="header__button">Записаться на прием</div>
 
+                    <div class="header__burger-menu">
+
+                        <div class="burger_menu" id="burger_menu">
+
+                            <span></span>
+
+                            <span></span>
+
+                            <span></span>
+
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
+                
 
             </div>
 
         </div>
 
     </header>
+
+    <div class="header__nav-adaptive">
+
+        <nav class="header__nav">
+
+            <a href="directions.html" class="header__nav-link">Направления</a>
+
+                    <a href="doctors.html" class="header__nav-link">Врачи</a>
+
+                    <a href="about__clinic.html" class="header__nav-link">О клинике</a>
+
+    
+
+    
+
+                    <div class="header__nav-dropdown">
+
+                        <div class="header__nav-dropdown--header">
+
+                            <p>Пациентам</p>
+
+                            <img class="dropdown__row" src="../../images/dropdown__row.svg" alt="">
+
+                        </div>
+
+                        <div class="header__nav-dropdown--inner">
+
+                            <a href="for_patients.html" class="dropdown__inner-link">Информация для пациентов</a>
+
+                            <a href="info.html" class="dropdown__inner-link">Правовая информация</a>
+
+                            <a href="stocks.html" class="dropdown__inner-link">Акции</a>
+
+                        </div>
+
+    
+
+                    </div>
+
+    
+
+    
+
+                    <a href="publications.html" class="header__nav-link">Публикации</a>
+
+                    <a href="reviews.html" class="header__nav-link">Отзывы</a>
+
+        </nav>
+
+    </div>
 
     <main class="main " id="main">
         <div class="container">
@@ -370,6 +438,8 @@
 
                             <div class="contact__address-text">
 
+                                <div class="contact__address-text-wrapper">
+
                                 <h3>г. Джанкой, ул. Ленина, 23</h3>
 
                                 <p>Пересечение улиц: Ломоносовский
@@ -388,27 +458,33 @@
 
                                 </a>
 
+                                </div>  
+
                             </div>
 
                             <div class="contact__address-time">
 
-                                <p class="contact__work-time">
+                                <div class="contact__address-time-wrapper">
 
-                                    Пн-Пт: 8:00 - 16:00<br>
+                                    <p class="contact__work-time">
 
-                                    Сб: 8:00 - 13:00<br>
+                                        Пн-Пт: 8:00 - 16:00<br>
 
-                                    Вс: выходной</p>
+                                        Сб: 8:00 - 13:00<br>
 
-                                <div class="contact__phone">
+                                        Вс: выходной</p>
 
-                                    <a href="tel:+79788667953">+7 (978) 866-79-53</a>
+                                    <div class="contact__phone">
 
-                                    <a href="tel:+79787419300">+7 (978) 741-93-00</a>
+                                        <a href="tel:+79788667953">+7 (978) 866-79-53</a>
+
+                                        <a href="tel:+79787419300">+7 (978) 741-93-00</a>
+
+                                    </div>
+
+                                    <a class="contact__email" href="mailto:marvaslup@mail.ru">marvaslup@mail.ru</a>
 
                                 </div>
-
-                                <a class="contact__email" href="mailto:marvaslup@mail.ru">marvaslup@mail.ru</a>
 
                             </div>
 
@@ -438,89 +514,97 @@
 
                             </div>
 
-                            <div class="consultation__form-btn--policy">
+                            <div class="contact__form-wrapper">
 
-                                <label class="check-label" for="contact__form-checkbox" >
+                                <div class="consultation__form-btn--policy">
 
-                                    <span class="options__desc">
+                                    <label class="check-label" for="contact__form-checkbox" >
 
-                                    </span>
+                                        <span class="options__desc">
 
-                                    <input
+                                        </span>
 
-                                        id="contact__form-checkbox"
+                                        <input
 
-                                        type="checkbox"
+                                            id="contact__form-checkbox"
 
-                                        name="checkbox"
+                                            type="checkbox"
 
-                                    />
+                                            name="checkbox"
 
-                                    <span
+                                        />
 
-                                        class="fakecheck"
+                                        <span
 
-                                    >
-
-                                        <svg
-
-                                            xmlns="http://www.w3.org/2000/svg"
-
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-
-                                            viewBox="0 0 24 24"
-
-                                            width="18px"
-
-                                            height="18px"
-
-                                            id="checkmark"
+                                            class="fakecheck"
 
                                         >
 
-                                            <polyline
+                                            <svg
 
-                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
 
-                                                stroke="#fff"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
 
-                                                stroke-width="3"
+                                                viewBox="0 0 24 24"
 
-                                                stroke-linecap="round"
+                                                width="18px"
 
-                                                stroke-linejoin="round"
+                                                height="18px"
 
-                                                stroke-miterlimit="10"
+                                                id="checkmark"
 
-                                                points=" 5,12 9,16 18,8"
+                                            >
 
-                                            />
+                                                <polyline
 
-                                        </svg>
+                                                    fill="none"
 
-                                    </span>
+                                                    stroke="#fff"
 
-                                </label>
+                                                    stroke-width="3"
 
-                                <p>Я соглашаюсь с <a href="">политикой конфиденциальности</a></p>
+                                                    stroke-linecap="round"
 
-                            </div>
+                                                    stroke-linejoin="round"
 
-                            <div class="button">
+                                                    stroke-miterlimit="10"
 
-                                <span>Получить консультацию</span>
+                                                    points=" 5,12 9,16 18,8"
 
-                                <div class="button__icon-wrapper">
+                                                />
 
-                                    <div class="button__icon">
+                                            </svg>
 
-                                        <img src="../images/button__row.svg" alt="">
+                                        </span>
+
+                                    </label>
+
+                                    <p>Я соглашаюсь с <a href="">политикой конфиденциальности</a></p>
+
+                                </div>
+
+                                <div class="button">
+
+                                    <span>Получить консультацию</span>
+
+                                    <div class="button__icon-wrapper">
+
+                                        <div class="button__icon">
+
+                                            <img src="../images/button__row.svg" alt="">
+
+                                        </div>
 
                                     </div>
 
                                 </div>
 
                             </div>
+
+    
+
+    
 
                         </form>
 
@@ -535,6 +619,8 @@
         </div>
 
     </section>
+
+    
 
 <!------------------- Подключение блока ФОС ---------------------->
 

@@ -259,6 +259,26 @@ const swiper = new Swiper('.gallerySlider', {
       },
 })
 
+const gallerySliderAdaptive = new Swiper('.gallerySlideradaptive', {
+  loop: true,
+  speed: 600,
+  centeredSlides: true,
+  // autoplay: {
+  //     delay: 4000,
+  //     disableOnInteraction: false,
+  // },
+
+  navigation: {
+      nextEl: ".gallerySlideradaptive-next",
+      prevEl: ".gallerySlideradaptive-prev",
+  },
+  pagination: {
+      el: ".gallerySlideradaptive-pagination",
+      clickable: true,
+    },
+})
+
+
 
 
 $('#radio__doctor').click(function() {
@@ -394,3 +414,10 @@ $(document).on('click', menuItemsSelector, function() {
 //         }
 //     });
 // });
+$("#burger_menu").click(function() {
+  $(this).toggleClass('open');
+  $(".header__nav-adaptive").toggleClass("open");
+  $("html").toggleClass("site__fixed");
+  $("body").toggleClass("site__fixed");
+});
+

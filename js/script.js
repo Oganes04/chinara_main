@@ -431,7 +431,9 @@ $("#burger_menu").click(function() {
 
    if (y > 0) {
      $('.header__inner').addClass('navbar-shadow');
+     $('.header .container').css('padding', '0');
    } else {
      $('.header__inner').removeClass('navbar-shadow');
+     $('.header .container').css('padding', '0 10px');
    }
  });

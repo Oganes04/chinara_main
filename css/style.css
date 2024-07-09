@@ -710,7 +710,6 @@ input[type=radio]:checked {
 html,
 body {
   max-width: 100vw;
-  overflow-y: scroll;
 }
 
 .site__fixed {
@@ -4330,6 +4329,18 @@ body {
   display: none;
 }
 
+.section__header-header.section__header-header-adaptive {
+  display: none;
+}
+
+.taking_tests.about__clinic-page .button span:nth-child(2) {
+  display: none;
+}
+
+.vacansy .vacansy__card .button span:nth-child(2) {
+  display: none;
+}
+
 @media only screen and (max-width: 1400px) {
   .reviews__item-author p {
     max-width: 150px;
@@ -5191,6 +5202,15 @@ body {
     margin-bottom: 30px;
   }
 
+  .about__clinic-info-wrapper {
+    display: block;
+  }
+
+  .about__clinic-info-wrapper .about__clinic-text {
+    display: block;
+    margin-bottom: 30px;
+  }
+
   .about__clinic-info-wrapper p {
     word-wrap: break-word;
   }
@@ -5561,6 +5581,11 @@ body {
     display: none;
   }
 
+  .gallerySlider--pagination {
+    display: block;
+    text-align: center;
+  }
+
   .offer__uniqueness-block {
     padding: 20px 15px;
   }
@@ -5881,14 +5906,127 @@ body {
     margin-bottom: 40px;
   }
 
+  .vacansy .section__header {
+    margin-bottom: 40px;
+  }
+
   .vacansy .section__header .section__header-header h2 {
-    max-width: 176px;
+    max-width: 272px;
     font-size: 32px;
   }
 
   .vacansy .section__header .section__header-header b {
     display: inline-block;
     margin: 10px 0;
+  }
+
+  .about__clinic-info .section__header .section__header-header {
+    display: none;
+  }
+
+  .about__clinic-info .section__header-header.section__header-header-adaptive {
+    display: block;
+  }
+
+  .about__clinic-info .section__header-header.section__header-header-adaptive b {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .about__clinic-info-wrapper .about__clinic-cards {
+    gap: 10px;
+  }
+
+  .about__clinic-info-wrapper .about__clinic-cards .about__clinic-card {
+    padding: 30px 15px;
+    gap: 20px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .about__clinic-info-wrapper .about__clinic-cards .about__clinic-card p:nth-child(1) {
+    font-size: 18px;
+  }
+
+  .about__clinic-info-wrapper .about__clinic-cards .about__clinic-card p:nth-child(2) {
+    font-size: 48px;
+    align-items: flex-end;
+  }
+
+  .about__clinic-info-wrapper .about__clinic-cards .about__clinic-card p:nth-child(2) span {
+    font-size: 32px;
+  }
+
+  .vacansy__card-img {
+    height: 270px;
+  }
+
+  .taking_tests.about__clinic-page .button {
+    width: auto;
+    max-width: 300px;
+  }
+
+  .taking_tests.about__clinic-page .button span:nth-child(1) {
+    display: none;
+  }
+
+  .taking_tests.about__clinic-page .button span:nth-child(2) {
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+  }
+
+  .about__clinic-info-wrapper .about__clinic-cards {
+    flex-direction: column !important;
+  }
+
+  .about__clinic-info-inner {
+    padding: 40px 20px 20px;
+  }
+
+  .documents__inner {
+    padding-top: 20px !important;
+  }
+
+  .document__items .document__item .document__img {
+    margin: 0;
+  }
+
+  .document__items .document__item .document__info h3 {
+    margin-bottom: 20px;
+  }
+
+  .document__items .document__item .document__info p:nth-child(4) {
+    margin-top: 10px;
+  }
+
+  .vacansy__inner .vacansy__card-col ul li {
+    font-size: 18px;
+  }
+
+  .vacansy__inner .vacansy__card-row:nth-child(1) h3 {
+    font-size: 24px;
+  }
+
+  .vacansy__inner .vacansy__card-row:nth-child(1) {
+    margin-bottom: 30px;
+  }
+
+  .vacansy__inner .vacansy__card-col h4 {
+    font-size: 20px;
+  }
+
+  .vacansy__inner .vacansy__card-info {
+    padding: 70px 15px 30px;
+  }
+
+  .vacansy__inner .vacansy__card-row {
+    justify-content: space-around;
+  }
+
+  .contacts .button {
+    gap: 10px;
+    margin: 0 auto;
   }
 }
 
@@ -5900,12 +6038,53 @@ body {
   }
 }
 
+@media only screen and (max-width: 420px) {
+  .about__clinic-gallery .section__header {
+    margin-bottom: 40px;
+  }
+
+  .about__clinic-gallery .section__header-header b {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  .about__clinic-gallery .section__header-header h2 {
+    max-width: 236px;
+  }
+}
+
 @media only screen and (max-width: 390px) {
+  .vacansy .section__header .section__header-header h2 {
+    max-width: 208px;
+  }
+
+  .vacansy .vacansy__card .button {
+    width: 100%;
+    max-width: 240px;
+    gap: 10px;
+  }
+
+  .vacansy .vacansy__card .button span:nth-child(1) {
+    display: none;
+  }
+
+  .vacansy .vacansy__card .button span:nth-child(2) {
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+  }
+
   .footer__inner .policy a {
     text-decoration: underline;
   }
 
   .footer__inner .policy a::after {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .contacts .contact__form .button span {
+    font-size: 14px;
   }
 }

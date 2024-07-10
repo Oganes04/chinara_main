@@ -6310,6 +6310,27 @@ body {
   .publication__other .section__header {
     margin-bottom: 10px;
   }
+
+  .for__patient-page .taking_tests-img {
+    min-height: 200px;
+  }
+
+  .for__patient-page .taking_tests-img img {
+    min-height: 200px;
+  }
+
+  .faq .section__header {
+    margin-bottom: 40px;
+  }
+
+  .faq .section__header .section__header-header h2 {
+    max-width: 210px;
+  }
+
+  .faq .section__header .section__header-header b {
+    display: inline-block;
+    margin-top: 5px;
+  }
 }
 
 @media only screen and (max-width: 500px) {

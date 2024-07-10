@@ -6318,7 +6318,7 @@ body {
   .for__patient-page .taking_tests-img img {
     min-height: 200px;
     width: 100%;
-    max-width: none;
+    max-width: 100%;
   }
 
   .faq .section__header {

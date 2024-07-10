@@ -6317,6 +6317,8 @@ body {
 
   .for__patient-page .taking_tests-img img {
     min-height: 200px;
+    width: 100%;
+    max-width: none;
   }
 
   .faq .section__header {
@@ -6335,6 +6337,10 @@ body {
   .for__patient-page .taking_tests-inner .taking_tests-form,
   .for__patient-page .taking_tests-inner .taking_tests-img {
     flex: none;
+  }
+
+  .faq__items-header {
+    gap: 10px;
   }
 }
 

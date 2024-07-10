@@ -130,24 +130,52 @@ var swiper = new Swiper(".stockSwiper-second", {
         el: ".stockSwiper-second-pagination",
         clickable: true,
     },
-    on: {
-        slideChangeTransitionStart: function () {
-            $('.stocks__card--info-text h3, .stocks__card--info-text p').animate({opacity: 0}, 300);
-        },
-        transitionEnd: function () {
-            var activeSlideH3 = this.slides[this.activeIndex].querySelector('h3').innerText;
-            var activeSlideText = this.slides[this.activeIndex].querySelector('p').innerText;
-            $('.stocks__card--info-text h3').text(activeSlideH3).animate({opacity: 1}, 300);
-            $('.stocks__card--info-text p').text(activeSlideText).animate({opacity: 1}, 300);
-        },
-    },
+    // on: {
+    //     slideChangeTransitionStart: function () {
+    //         $('.stocks__card--info-text h3, .stocks__card--info-text p').animate({opacity: 0}, 300);
+    //     },
+    //     transitionEnd: function () {
+    //         var activeSlideH3 = this.slides[this.activeIndex].querySelector('h3').innerText;
+    //         var activeSlideText = this.slides[this.activeIndex].querySelector('p').innerText;
+    //         $('.stocks__card--info-text h3').text(activeSlideH3).animate({opacity: 1}, 300);
+    //         $('.stocks__card--info-text p').text(activeSlideText).animate({opacity: 1}, 300);
+    //     },
+    // },
 });
 
 // Initialize the text of the first slide
-var firstSlideH3 = swiper.slides[0].querySelector('h3').innerText;
-var firstSlideText = swiper.slides[0].querySelector('p').innerText;
-$('.stocks__card--info-text h3').text(firstSlideH3);
-$('.stocks__card--info-text p').text(firstSlideText);
+// var firstSlideH3 = swiper.slides[0].querySelector('h3').innerText;
+// var firstSlideText = swiper.slides[0].querySelector('p').innerText;
+// $('.stocks__card--info-text h3').text(firstSlideH3);
+// $('.stocks__card--info-text p').text(firstSlideText);
+
+
+
+//=================== Слайдер в акциях ============
+
+
+
+const stockSwiperAdaptive = new Swiper('.stockSwiper-third', {
+  loop: true,
+  speed: 600,
+  spaceBetween: 30,
+  // centeredSlides: true,
+  // autoplay: {
+  //     delay: 4000,
+  //     disableOnInteraction: false,
+  // },
+
+  // navigation: {
+  //     nextEl: ".gallerySlideradaptive-next",
+  //     prevEl: ".gallerySlideradaptive-prev",
+  // },
+  pagination: {
+      el: ".stockSwiper-second-pagination",
+      clickable: true,
+    },
+})
+
+
 
 
 //============= Слайдер с врачами ===========

@@ -3457,6 +3457,11 @@ body {
   max-width: 567px;
 }
 
+.stockSwiper-third .vacansy__card-img img {
+  height: auto;
+  max-height: 270px;
+}
+
 .reviews.reviews__page .reviews__inner {
   border-radius: 0px;
   padding: 0px;
@@ -4332,6 +4337,10 @@ body {
 
 .about__doctor.doctor__page.adaptive__show {
   display: none;
+}
+
+.stockSwiper-third {
+  display: none !important;
 }
 
 .section__header-header.section__header-header-adaptive {
@@ -6050,6 +6059,14 @@ body {
 
   .contact__address-text-wrapper .section__header-button {
     font-size: 18px;
+  }
+
+  .vacansy__inner > .vacansy__card {
+    display: none !important;
+  }
+
+  .stockSwiper-third {
+    display: block !important;
   }
 }
 

@@ -4075,6 +4075,7 @@ body {
 
 .faq__items-header svg {
   transition: all 0.3s ease;
+  flex: none;
 }
 
 .faq__items-header svg rect {
@@ -4396,8 +4397,16 @@ body {
   display: none !important;
 }
 
+.publication__items-adaptive {
+  display: none;
+}
+
 .about__doctor.doctor__page.adaptive__show {
   display: none;
+}
+
+.for__patient-page ~ .publication__other .publication__other-inner {
+  border-radius: 0;
 }
 
 .stockSwiper-third {
@@ -5048,6 +5057,34 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+
+  .for__patient-page .taking_tests-form {
+    padding: clamp(29px, 3.125vw, 60px);
+  }
+
+  .taking_tests-inner {
+    margin-bottom: 40px;
+  }
+
+  .publication__other-inner {
+    padding: 120px 20px 100px;
+  }
+
+  .publication__other .publication__items {
+    display: none;
+  }
+
+  .publication__items.publication__items-adaptive {
+    display: block;
+  }
+
+  .publication__items.publication__items-adaptive .swiper-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .for__patient-page .taking_tests-form p {
+    max-width: 436px;
+  }
 }
 
 @media only screen and (max-width: 950px) {
@@ -5071,6 +5108,36 @@ body {
 
   .about__doctor.doctor__page .about__doctor-info .about__doctor-info--row {
     gap: 10px;
+  }
+
+  .prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item p {
+    margin-right: auto;
+    width: 100%;
+    max-width: none;
+  }
+
+  .prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item span {
+    margin-left: auto;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item p {
+    margin-right: auto;
+    width: 100%;
+    max-width: none;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item span {
+    margin-left: auto;
   }
 }
 
@@ -5192,6 +5259,10 @@ body {
     width: 281px !important;
   }
 
+  .prices__block-menu .prices__menu-item {
+    max-width: 350px;
+  }
+
   .about__doctor.doctor__page .adaptive__hidden {
     display: none;
   }
@@ -5288,6 +5359,14 @@ body {
 
   .about__clinic-info-wrapper p {
     word-wrap: break-word;
+  }
+
+  .for__patient-page .taking_tests-inner {
+    flex-direction: column-reverse;
+  }
+
+  .for__patient-page .taking_tests-form {
+    padding: 30px 15px;
   }
 }
 
@@ -5461,6 +5540,38 @@ body {
     width: 100%;
     padding-top: 20px;
     padding-left: 0;
+  }
+
+  .prices__block {
+    flex-direction: column;
+  }
+
+  .prices__block-menu .prices__menu-item {
+    max-width: none;
+    width: 100%;
+  }
+
+  .prices__block-menu .prices__menu-item:last-child {
+    margin: 0;
+  }
+
+  .prices__block .prices__block-price__list .price__list-header {
+    display: none;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception .price__list-category__header,
+  .prices__block .prices__block-price__list .price__list-procedures .price__list-category__header {
+    padding: 30px 15px;
+    margin-bottom: 10px;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item,
+  .prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item {
+    padding: 15px;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception {
+    margin-bottom: 30px;
   }
 }
 
@@ -6008,7 +6119,7 @@ body {
 
   .vacansy .section__header .section__header-header b {
     display: inline-block;
-    margin: 10px 0;
+    margin: 5px 0;
   }
 
   .about__clinic-info .section__header .section__header-header {
@@ -6135,6 +6246,69 @@ body {
   .slider__animation {
     display: flex;
     margin-left: auto;
+  }
+
+  .faq__items-header {
+    padding: 30px 15px;
+  }
+
+  .faq__items-header p {
+    font-size: 18px;
+  }
+
+  .prices__block-menu .prices__menu-item {
+    padding: 20px 15px;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception .price__list-category__header,
+  .prices__block .prices__block-price__list .price__list-procedures .price__list-category__header {
+    font-size: 18px;
+  }
+
+  .faq__inner {
+    padding-bottom: 80px !important;
+  }
+
+  .publication__other-inner {
+    padding: 80px 15px 60px;
+  }
+
+  .publication__items.publication__items-adaptive {
+    display: block;
+  }
+
+  .publication__items.publication__items-adaptive .swiper-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .publication__items.publication__items-adaptive {
+    margin-bottom: 30px;
+  }
+
+  .publication__items .publication__item .publication__info {
+    height: 253px;
+    padding: 30px 10px 10px 10px;
+  }
+
+  .publication__items .publication__item .publication__info-text {
+    display: none;
+  }
+
+  .publication__items .publication__item h4 {
+    font-size: 18px;
+  }
+
+  .publication__other .section__header-header h2 {
+    max-width: 250px;
+  }
+
+  .publication__other .section__header-header b {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  .publication__other .section__header {
+    margin-bottom: 10px;
   }
 }
 

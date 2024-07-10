@@ -177,6 +177,27 @@ const stockSwiperAdaptive = new Swiper('.stockSwiper-third', {
 
 
 
+const publicationSwiper = new Swiper('.publicationSwiper-adaptive', {
+  loop: true,
+  speed: 600,
+  spaceBetween: 30,
+  // centeredSlides: true,
+  // autoplay: {
+  //     delay: 4000,
+  //     disableOnInteraction: false,
+  // },
+
+  navigation: {
+      nextEl: ".publicationSwiper-next",
+      prevEl: ".publicationSwiper-prev",
+  },
+  pagination: {
+      el: ".publicationSwiper-pagination",
+      clickable: true,
+    },
+})
+
+
 
 //============= Слайдер с врачами ===========
 

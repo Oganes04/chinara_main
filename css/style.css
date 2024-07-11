@@ -1049,6 +1049,10 @@ body {
   justify-content: center;
 }
 
+.header__nav-adaptive .header__nav-dropdown--inner a {
+  text-align: center;
+}
+
 .header__nav-adaptive .header__nav {
   display: flex;
   flex-direction: column;
@@ -3871,7 +3875,18 @@ body {
 }
 
 .publication__page .taking_tests-inner {
-  align-items: flex-start;
+  align-items: stretch;
+}
+
+.publication__page .taking_tests-inner .taking_tests-img {
+  border-radius: 35px;
+}
+
+.publication__page .taking_tests-inner .taking_tests-img img {
+  height: 100%;
+  border-radius: 35px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .publication__page .taking_tests-form ul {
@@ -4398,6 +4413,10 @@ body {
   justify-content: flex-end;
 }
 
+.reviews__form .input__text {
+  height: 3.33vw;
+}
+
 .gallerySlideradaptive {
   display: none !important;
 }
@@ -4457,6 +4476,10 @@ body {
 
   .vacansy__inner .vacansy__card-row:nth-child(1) h3 {
     max-width: 420px;
+  }
+
+  .taking_tests.publication__page .taking_tests-form {
+    padding: clamp(30px, 3.68vw, 60px);
   }
 }
 
@@ -4735,6 +4758,14 @@ body {
   .vacansy__card-info {
     height: 360px !important;
   }
+
+  .taking_tests.publication__page .taking_tests-form {
+    padding: 30px 35px 30px 15px;
+  }
+
+  .taking_tests.publication__page ul li a {
+    font-size: clamp(18px, 1.25vw, 24px);
+  }
 }
 
 @media only screen and (max-width: 1130px) {
@@ -4748,6 +4779,14 @@ body {
 
   .vacansy__inner .vacansy__card-row:nth-child(1) h3 {
     max-width: 419px;
+  }
+
+  .reviews.reviews__page .reviews__inner .reviews__list {
+    padding: 40px 20px;
+  }
+
+  .reviews__form {
+    padding: 40px 20px;
   }
 }
 
@@ -4769,6 +4808,20 @@ body {
 @media only screen and (max-width: 1050px) {
   .vacansy__inner .vacansy__card-info {
     padding-right: 180px;
+  }
+
+  .reviews.reviews__page .reviews__inner .reviews__list .reviews__item .reviews__item-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .reviews.reviews__page .reviews__inner .reviews__list .reviews__item .reviews__item-row .reviews__item-point {
+    margin-left: auto;
+  }
+
+  .reviews__form {
+    min-width: 409px;
   }
 }
 
@@ -5090,6 +5143,19 @@ body {
   .for__patient-page .taking_tests-form p {
     max-width: 436px;
   }
+
+  .publication__content-inner {
+    padding: 60px 20px;
+  }
+
+  .stocks__page .stocks__page-inner {
+    padding: 40px 15px;
+  }
+
+  .stocks__page .stocks__page-inner .stocks__card-img img {
+    width: 46vw;
+    min-width: 0;
+  }
 }
 
 @media only screen and (max-width: 950px) {
@@ -5186,6 +5252,20 @@ body {
   .tests__prices-search input {
     width: 100%;
   }
+
+  .publication__page .taking_tests-inner {
+    flex-direction: column-reverse;
+  }
+
+  .publication__page .taking_tests-inner .taking_tests-img {
+    max-height: 400px;
+  }
+
+  .publication__page .taking_tests-inner .taking_tests-img img {
+    max-height: 400px;
+    width: 100%;
+    max-width: none;
+  }
 }
 
 @media only screen and (max-width: 890px) {
@@ -5196,6 +5276,35 @@ body {
 
   .reviews {
     display: none;
+  }
+
+  .reviews.reviews__page {
+    display: block;
+  }
+
+  .reviews.reviews__page .reviews__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 0 !important;
+  }
+
+  .reviews__form {
+    width: 100%;
+    padding: 40px 15px;
+    min-width: 0;
+  }
+
+  .reviews__form .reviews__form-point {
+    flex-wrap: wrap;
+  }
+
+  .reviews__form .dropdown {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .reviews__form .reviews__form-selector {
+    flex-wrap: wrap;
   }
 
   .reviews__adaptive .section__header {
@@ -5498,6 +5607,11 @@ body {
 
   .taking_tests.about__clinic-page .taking_tests-form {
     padding: 40px 15px;
+  }
+
+  .stocks__page .stocks__page-inner .stocks__card-img img {
+    width: 100%;
+    min-width: 0;
   }
 }
 
@@ -6368,6 +6482,49 @@ body {
   .info__section .info__section-block {
     padding: 30px 15px;
   }
+
+  .taking_tests.publication__page .taking_tests-form {
+    padding: 40px 15px 30px;
+  }
+
+  .publication__content-inner h1 {
+    margin-bottom: 30px;
+  }
+
+  .publication__content-inner {
+    padding-bottom: 20px;
+  }
+
+  .publication__content-inner .button {
+    gap: 10px;
+  }
+
+  .stocks__page .stocks__page-inner {
+    padding: 40px 15px;
+  }
+
+  .stocks__page .stocks__page-inner .stocks__card-img img {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .stocks__page .stocks__page-inner .section__header {
+    margin-bottom: 30px;
+  }
+
+  .reviews.reviews__page {
+    display: block;
+  }
+
+  .reviews.reviews__page .reviews__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 !important;
+  }
+
+  .reviews.reviews__page {
+    margin-bottom: 40px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -6421,10 +6578,23 @@ body {
   .footer__inner .policy a::after {
     display: none;
   }
+
+  .reviews__form .reviews__form-selector {
+    gap: 20px;
+  }
 }
 
 @media only screen and (max-width: 340px) {
   .contacts .contact__form .button span {
     font-size: 14px;
+  }
+
+  .stocks__page .stocks__page-inner .section__header-header h2 {
+    max-width: 180px;
+  }
+
+  .stocks__page .stocks__page-inner .section__header-header b {
+    display: inline-block;
+    margin-bottom: 5px;
   }
 }
